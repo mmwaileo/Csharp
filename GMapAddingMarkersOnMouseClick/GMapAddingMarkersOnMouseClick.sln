@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMapAddingMarkersOnMouseClick", "GMapAddingMarkersOnMouseClick\GMapAddingMarkersOnMouseClick.csproj", "{212F473D-C6C7-4418-86A2-8198F13FEA47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{212F473D-C6C7-4418-86A2-8198F13FEA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212F473D-C6C7-4418-86A2-8198F13FEA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212F473D-C6C7-4418-86A2-8198F13FEA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212F473D-C6C7-4418-86A2-8198F13FEA47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5EDF0BA-C948-4C92-8B18-8508B0846047}
+	EndGlobalSection
+EndGlobal
