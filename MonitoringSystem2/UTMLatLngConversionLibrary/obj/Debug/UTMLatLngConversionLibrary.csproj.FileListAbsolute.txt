@@ -1,0 +1,12 @@
+D:\repos\Monitoring System\UTMLatLngConversionLibrary\bin\Debug\UTMLatLngConversionLibrary.dll
+D:\repos\Monitoring System\UTMLatLngConversionLibrary\bin\Debug\UTMLatLngConversionLibrary.pdb
+D:\repos\Monitoring System\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.csproj.AssemblyReference.cache
+D:\repos\Monitoring System\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.csproj.CoreCompileInputs.cache
+D:\repos\Monitoring System\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.dll
+D:\repos\Monitoring System\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.pdb
+D:\repos\MonitoringSystem2\UTMLatLngConversionLibrary\bin\Debug\UTMLatLngConversionLibrary.dll
+D:\repos\MonitoringSystem2\UTMLatLngConversionLibrary\bin\Debug\UTMLatLngConversionLibrary.pdb
+D:\repos\MonitoringSystem2\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.csproj.AssemblyReference.cache
+D:\repos\MonitoringSystem2\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.csproj.CoreCompileInputs.cache
+D:\repos\MonitoringSystem2\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.dll
+D:\repos\MonitoringSystem2\UTMLatLngConversionLibrary\obj\Debug\UTMLatLngConversionLibrary.pdb

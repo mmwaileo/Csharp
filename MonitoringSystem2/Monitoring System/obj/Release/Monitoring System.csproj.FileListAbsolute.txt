@@ -1,0 +1,40 @@
+D:\repos\Monitoring System\Monitoring System\bin\Release\Monitoring System.exe.config
+D:\repos\Monitoring System\Monitoring System\bin\Release\Monitoring System.exe.manifest
+D:\repos\Monitoring System\Monitoring System\bin\Release\Monitoring System.application
+D:\repos\Monitoring System\Monitoring System\bin\Release\Monitoring System.exe
+D:\repos\Monitoring System\Monitoring System\bin\Release\Monitoring System.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Release\EntityFramework.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\EntityFramework.SqlServer.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\GMap.NET.Core.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\GMap.NET.WindowsForms.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\GMap.NET.WindowsPresentation.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\Newtonsoft.Json.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\Sharp7.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Data.SqlClient.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Data.SQLite.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Data.SQLite.EF6.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Data.SQLite.Linq.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Security.Principal.Windows.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\UTMLatLngConversionLibrary.dll
+D:\repos\Monitoring System\Monitoring System\bin\Release\Sharp7.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Release\UTMLatLngConversionLibrary.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Release\EntityFramework.xml
+D:\repos\Monitoring System\Monitoring System\bin\Release\EntityFramework.SqlServer.xml
+D:\repos\Monitoring System\Monitoring System\bin\Release\Newtonsoft.Json.xml
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Data.SqlClient.xml
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Data.SQLite.xml
+D:\repos\Monitoring System\Monitoring System\bin\Release\System.Security.Principal.Windows.xml
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.csproj.AssemblyReference.cache
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.csproj.SuggestedBindingRedirects.cache
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring_System.Form1.resources
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring_System.Properties.Resources.resources
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring_System.UserControl1.resources
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring_System.UserControl2.resources
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring_System.UserControl3.resources
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.csproj.GenerateResource.cache
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.csproj.CoreCompileInputs.cache
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.exe.manifest
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.application
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.csproj.CopyComplete
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.exe
+D:\repos\Monitoring System\Monitoring System\obj\Release\Monitoring System.pdb

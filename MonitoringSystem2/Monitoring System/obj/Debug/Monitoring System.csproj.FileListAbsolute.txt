@@ -1,0 +1,79 @@
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Monitoring System.exe
+D:\repos\Monitoring System\Monitoring System\bin\Debug\GMap.NET.Core.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\GMap.NET.WindowsForms.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Sharp7.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Data.SQLite.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\UTMLatLngConversionLibrary.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Monitoring System.exe.config
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Monitoring System.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Debug\EntityFramework.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\EntityFramework.SqlServer.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Newtonsoft.Json.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Data.SqlClient.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Data.SQLite.EF6.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Data.SQLite.Linq.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Security.Principal.Windows.dll
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Sharp7.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Debug\UTMLatLngConversionLibrary.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Debug\EntityFramework.xml
+D:\repos\Monitoring System\Monitoring System\bin\Debug\EntityFramework.SqlServer.xml
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Newtonsoft.Json.xml
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Data.SqlClient.xml
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Data.SQLite.xml
+D:\repos\Monitoring System\Monitoring System\bin\Debug\System.Security.Principal.Windows.xml
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.csproj.AssemblyReference.cache
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.csproj.SuggestedBindingRedirects.cache
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring_System.Form1.resources
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring_System.Properties.Resources.resources
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring_System.UserControl1.resources
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring_System.UserControl2.resources
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring_System.UserControl3.resources
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.csproj.GenerateResource.cache
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.csproj.CoreCompileInputs.cache
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.csproj.CopyComplete
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.exe
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.pdb
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Monitoring System.exe.manifest
+D:\repos\Monitoring System\Monitoring System\bin\Debug\Monitoring System.application
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.exe.manifest
+D:\repos\Monitoring System\Monitoring System\obj\Debug\Monitoring System.application
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Monitoring System.exe.config
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Monitoring System.exe.manifest
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Monitoring System.application
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Monitoring System.exe
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Monitoring System.pdb
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\EntityFramework.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\EntityFramework.SqlServer.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\GMap.NET.Core.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\GMap.NET.WindowsForms.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Newtonsoft.Json.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Sharp7.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Data.SqlClient.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Data.SQLite.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Data.SQLite.EF6.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Data.SQLite.Linq.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Security.Principal.Windows.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\UTMLatLngConversionLibrary.dll
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Sharp7.pdb
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\UTMLatLngConversionLibrary.pdb
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\EntityFramework.xml
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\EntityFramework.SqlServer.xml
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\Newtonsoft.Json.xml
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Data.SqlClient.xml
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Data.SQLite.xml
+D:\repos\MonitoringSystem2\Monitoring System\bin\Debug\System.Security.Principal.Windows.xml
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.csproj.AssemblyReference.cache
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring_System.Form1.resources
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring_System.Properties.Resources.resources
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring_System.UserControl1.resources
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring_System.UserControl2.resources
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring_System.UserControl3.resources
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.csproj.GenerateResource.cache
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.csproj.CoreCompileInputs.cache
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.exe.manifest
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.application
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.csproj.CopyComplete
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.exe
+D:\repos\MonitoringSystem2\Monitoring System\obj\Debug\Monitoring System.pdb

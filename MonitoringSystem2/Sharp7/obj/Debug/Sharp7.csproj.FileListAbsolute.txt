@@ -1,0 +1,12 @@
+D:\repos\Monitoring System\Sharp7\bin\Debug\Sharp7.dll
+D:\repos\Monitoring System\Sharp7\bin\Debug\Sharp7.pdb
+D:\repos\Monitoring System\Sharp7\obj\Debug\Sharp7.csproj.AssemblyReference.cache
+D:\repos\Monitoring System\Sharp7\obj\Debug\Sharp7.csproj.CoreCompileInputs.cache
+D:\repos\Monitoring System\Sharp7\obj\Debug\Sharp7.dll
+D:\repos\Monitoring System\Sharp7\obj\Debug\Sharp7.pdb
+D:\repos\MonitoringSystem2\Sharp7\bin\Debug\Sharp7.dll
+D:\repos\MonitoringSystem2\Sharp7\bin\Debug\Sharp7.pdb
+D:\repos\MonitoringSystem2\Sharp7\obj\Debug\Sharp7.csproj.AssemblyReference.cache
+D:\repos\MonitoringSystem2\Sharp7\obj\Debug\Sharp7.csproj.CoreCompileInputs.cache
+D:\repos\MonitoringSystem2\Sharp7\obj\Debug\Sharp7.dll
+D:\repos\MonitoringSystem2\Sharp7\obj\Debug\Sharp7.pdb
