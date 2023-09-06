@@ -121,6 +121,15 @@
             this.label88 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtSetting3SSInterval = new System.Windows.Forms.TextBox();
+            this.txtSetting3SSMin = new System.Windows.Forms.TextBox();
+            this.txtSetting3SSMax = new System.Windows.Forms.TextBox();
+            this.txtSetting3ElevationInterval = new System.Windows.Forms.TextBox();
+            this.txtSetting3ElevationMin = new System.Windows.Forms.TextBox();
+            this.txtSetting3ElevationMax = new System.Windows.Forms.TextBox();
+            this.txtSetting3PDLimit = new System.Windows.Forms.TextBox();
+            this.txtSetting3PMin = new System.Windows.Forms.TextBox();
+            this.txtSetting3PMax = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -141,15 +150,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.btnSetGauge = new System.Windows.Forms.Button();
-            this.txtSetting3PMax = new System.Windows.Forms.TextBox();
-            this.txtSetting3PMin = new System.Windows.Forms.TextBox();
-            this.txtSetting3ElevationMax = new System.Windows.Forms.TextBox();
-            this.txtSetting3PDLimit = new System.Windows.Forms.TextBox();
-            this.txtSetting3ElevationInterval = new System.Windows.Forms.TextBox();
-            this.txtSetting3ElevationMin = new System.Windows.Forms.TextBox();
-            this.txtSetting3SSMin = new System.Windows.Forms.TextBox();
-            this.txtSetting3SSMax = new System.Windows.Forms.TextBox();
-            this.txtSetting3SSInterval = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -161,7 +161,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.43569F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.56431F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 447F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 471F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox3, 2, 0);
@@ -236,7 +236,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 707);
+            this.groupBox1.Size = new System.Drawing.Size(396, 707);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -258,7 +258,7 @@
             this.lblSetting3y4.Name = "lblSetting3y4";
             this.lblSetting3y4.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3y4.TabIndex = 609;
-            this.lblSetting3y4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3y4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label96
             // 
@@ -278,7 +278,7 @@
             this.lblSetting3x4.Name = "lblSetting3x4";
             this.lblSetting3x4.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3x4.TabIndex = 607;
-            this.lblSetting3x4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3x4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label98
             // 
@@ -320,7 +320,7 @@
             this.lblSetting3y3.Name = "lblSetting3y3";
             this.lblSetting3y3.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3y3.TabIndex = 603;
-            this.lblSetting3y3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3y3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label102
             // 
@@ -351,7 +351,7 @@
             this.lblSetting3x3.Name = "lblSetting3x3";
             this.lblSetting3x3.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3x3.TabIndex = 600;
-            this.lblSetting3x3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3x3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label105
             // 
@@ -371,7 +371,7 @@
             this.lblSetting3y2.Name = "lblSetting3y2";
             this.lblSetting3y2.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3y2.TabIndex = 598;
-            this.lblSetting3y2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3y2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label107
             // 
@@ -413,7 +413,7 @@
             this.lblSetting3x2.Name = "lblSetting3x2";
             this.lblSetting3x2.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3x2.TabIndex = 594;
-            this.lblSetting3x2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3x2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label111
             // 
@@ -433,7 +433,7 @@
             this.lblSetting3y1.Name = "lblSetting3y1";
             this.lblSetting3y1.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3y1.TabIndex = 592;
-            this.lblSetting3y1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3y1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label113
             // 
@@ -475,7 +475,7 @@
             this.lblSetting3x1.Name = "lblSetting3x1";
             this.lblSetting3x1.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3x1.TabIndex = 588;
-            this.lblSetting3x1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3x1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label117
             // 
@@ -506,7 +506,7 @@
             this.lblSetting3WorkingArea.Name = "lblSetting3WorkingArea";
             this.lblSetting3WorkingArea.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3WorkingArea.TabIndex = 585;
-            this.lblSetting3WorkingArea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3WorkingArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label43
             // 
@@ -537,7 +537,7 @@
             this.lblSetting3Heading.Name = "lblSetting3Heading";
             this.lblSetting3Heading.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3Heading.TabIndex = 582;
-            this.lblSetting3Heading.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3Heading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label46
             // 
@@ -557,7 +557,7 @@
             this.lblSetting3GPS2Mode.Name = "lblSetting3GPS2Mode";
             this.lblSetting3GPS2Mode.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS2Mode.TabIndex = 580;
-            this.lblSetting3GPS2Mode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS2Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label48
             // 
@@ -600,7 +600,7 @@
             this.lblSetting3GPS2z.Name = "lblSetting3GPS2z";
             this.lblSetting3GPS2z.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS2z.TabIndex = 576;
-            this.lblSetting3GPS2z.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS2z.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label31
             // 
@@ -620,7 +620,7 @@
             this.lblSetting3GPS2y.Name = "lblSetting3GPS2y";
             this.lblSetting3GPS2y.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS2y.TabIndex = 574;
-            this.lblSetting3GPS2y.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS2y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
             // 
@@ -662,7 +662,7 @@
             this.lblSetting3GPS2x.Name = "lblSetting3GPS2x";
             this.lblSetting3GPS2x.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS2x.TabIndex = 570;
-            this.lblSetting3GPS2x.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS2x.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label37
             // 
@@ -682,7 +682,7 @@
             this.lblSetting3GPS1Mode.Name = "lblSetting3GPS1Mode";
             this.lblSetting3GPS1Mode.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS1Mode.TabIndex = 568;
-            this.lblSetting3GPS1Mode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS1Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label39
             // 
@@ -725,7 +725,7 @@
             this.lblSetting3GPS1z.Name = "lblSetting3GPS1z";
             this.lblSetting3GPS1z.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS1z.TabIndex = 564;
-            this.lblSetting3GPS1z.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS1z.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label52
             // 
@@ -745,7 +745,7 @@
             this.lblSetting3GPS1y.Name = "lblSetting3GPS1y";
             this.lblSetting3GPS1y.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS1y.TabIndex = 562;
-            this.lblSetting3GPS1y.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS1y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label54
             // 
@@ -787,7 +787,7 @@
             this.lblSetting3GPS1x.Name = "lblSetting3GPS1x";
             this.lblSetting3GPS1x.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3GPS1x.TabIndex = 558;
-            this.lblSetting3GPS1x.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3GPS1x.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label58
             // 
@@ -808,7 +808,7 @@
             this.lblSetting3Time.Name = "lblSetting3Time";
             this.lblSetting3Time.Size = new System.Drawing.Size(95, 32);
             this.lblSetting3Time.TabIndex = 556;
-            this.lblSetting3Time.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label91
             // 
@@ -878,9 +878,9 @@
             this.groupBox2.Controls.Add(this.label88);
             this.groupBox2.Controls.Add(this.label89);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(417, 3);
+            this.groupBox2.Location = new System.Drawing.Point(405, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(434, 707);
+            this.groupBox2.Size = new System.Drawing.Size(422, 707);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -889,7 +889,7 @@
             this.label59.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(283, 343);
+            this.label59.Location = new System.Drawing.Point(277, 343);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(126, 32);
             this.label59.TabIndex = 470;
@@ -901,18 +901,18 @@
             this.lblSetting3Autolet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3Autolet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblSetting3Autolet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3Autolet.Location = new System.Drawing.Point(178, 342);
+            this.lblSetting3Autolet.Location = new System.Drawing.Point(172, 342);
             this.lblSetting3Autolet.Name = "lblSetting3Autolet";
             this.lblSetting3Autolet.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3Autolet.TabIndex = 469;
-            this.lblSetting3Autolet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3Autolet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label61
             // 
             this.label61.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(283, 310);
+            this.label61.Location = new System.Drawing.Point(277, 310);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(126, 32);
             this.label61.TabIndex = 468;
@@ -924,20 +924,20 @@
             this.lblSetting3LevelSensor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3LevelSensor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lblSetting3LevelSensor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3LevelSensor.Location = new System.Drawing.Point(178, 309);
+            this.lblSetting3LevelSensor.Location = new System.Drawing.Point(172, 309);
             this.lblSetting3LevelSensor.Name = "lblSetting3LevelSensor";
             this.lblSetting3LevelSensor.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3LevelSensor.TabIndex = 467;
-            this.lblSetting3LevelSensor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3LevelSensor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label63
             // 
             this.label63.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(19, 342);
+            this.label63.Location = new System.Drawing.Point(6, 342);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(154, 32);
+            this.label63.Size = new System.Drawing.Size(161, 32);
             this.label63.TabIndex = 466;
             this.label63.Text = "Autolet";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -947,9 +947,9 @@
             this.label64.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(19, 309);
+            this.label64.Location = new System.Drawing.Point(6, 309);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(154, 32);
+            this.label64.Size = new System.Drawing.Size(161, 32);
             this.label64.TabIndex = 465;
             this.label64.Text = "Level Sensor";
             this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -959,7 +959,7 @@
             this.label65.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(283, 277);
+            this.label65.Location = new System.Drawing.Point(277, 277);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(126, 32);
             this.label65.TabIndex = 464;
@@ -971,18 +971,18 @@
             this.lblSetting3TideGauge.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3TideGauge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblSetting3TideGauge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3TideGauge.Location = new System.Drawing.Point(178, 276);
+            this.lblSetting3TideGauge.Location = new System.Drawing.Point(172, 276);
             this.lblSetting3TideGauge.Name = "lblSetting3TideGauge";
             this.lblSetting3TideGauge.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3TideGauge.TabIndex = 463;
-            this.lblSetting3TideGauge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3TideGauge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label67
             // 
             this.label67.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(283, 244);
+            this.label67.Location = new System.Drawing.Point(277, 244);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(126, 32);
             this.label67.TabIndex = 462;
@@ -994,20 +994,20 @@
             this.lblSetting3Heel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3Heel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lblSetting3Heel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3Heel.Location = new System.Drawing.Point(178, 243);
+            this.lblSetting3Heel.Location = new System.Drawing.Point(172, 243);
             this.lblSetting3Heel.Name = "lblSetting3Heel";
             this.lblSetting3Heel.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3Heel.TabIndex = 461;
-            this.lblSetting3Heel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3Heel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label69
             // 
             this.label69.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(19, 276);
+            this.label69.Location = new System.Drawing.Point(6, 276);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(154, 32);
+            this.label69.Size = new System.Drawing.Size(161, 32);
             this.label69.TabIndex = 460;
             this.label69.Text = "Tide Gauge";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1017,9 +1017,9 @@
             this.label70.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(19, 243);
+            this.label70.Location = new System.Drawing.Point(6, 243);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(154, 32);
+            this.label70.Size = new System.Drawing.Size(161, 32);
             this.label70.TabIndex = 459;
             this.label70.Text = "Inclinometer Heel";
             this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1029,7 +1029,7 @@
             this.label71.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(283, 211);
+            this.label71.Location = new System.Drawing.Point(277, 211);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(126, 32);
             this.label71.TabIndex = 458;
@@ -1041,18 +1041,18 @@
             this.lblSetting3Trim.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3Trim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblSetting3Trim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3Trim.Location = new System.Drawing.Point(178, 210);
+            this.lblSetting3Trim.Location = new System.Drawing.Point(172, 210);
             this.lblSetting3Trim.Name = "lblSetting3Trim";
             this.lblSetting3Trim.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3Trim.TabIndex = 457;
-            this.lblSetting3Trim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3Trim.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label73
             // 
             this.label73.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(283, 178);
+            this.label73.Location = new System.Drawing.Point(277, 178);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(126, 32);
             this.label73.TabIndex = 456;
@@ -1064,20 +1064,20 @@
             this.lblSetting3SS2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3SS2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lblSetting3SS2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3SS2.Location = new System.Drawing.Point(178, 177);
+            this.lblSetting3SS2.Location = new System.Drawing.Point(172, 177);
             this.lblSetting3SS2.Name = "lblSetting3SS2";
             this.lblSetting3SS2.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3SS2.TabIndex = 455;
-            this.lblSetting3SS2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3SS2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label75
             // 
             this.label75.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(19, 210);
+            this.label75.Location = new System.Drawing.Point(6, 210);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(154, 32);
+            this.label75.Size = new System.Drawing.Size(161, 32);
             this.label75.TabIndex = 454;
             this.label75.Text = "Inclinometer Trim";
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1087,9 +1087,9 @@
             this.label76.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(19, 177);
+            this.label76.Location = new System.Drawing.Point(6, 177);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(154, 32);
+            this.label76.Size = new System.Drawing.Size(161, 32);
             this.label76.TabIndex = 453;
             this.label76.Text = "Stroke Sensor 2 Right";
             this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1099,7 +1099,7 @@
             this.label77.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(283, 145);
+            this.label77.Location = new System.Drawing.Point(277, 145);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(126, 32);
             this.label77.TabIndex = 452;
@@ -1111,18 +1111,18 @@
             this.lblSetting3SS1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3SS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblSetting3SS1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3SS1.Location = new System.Drawing.Point(178, 144);
+            this.lblSetting3SS1.Location = new System.Drawing.Point(172, 144);
             this.lblSetting3SS1.Name = "lblSetting3SS1";
             this.lblSetting3SS1.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3SS1.TabIndex = 451;
-            this.lblSetting3SS1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3SS1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label79
             // 
             this.label79.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(283, 112);
+            this.label79.Location = new System.Drawing.Point(277, 112);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(126, 32);
             this.label79.TabIndex = 450;
@@ -1134,20 +1134,20 @@
             this.lblSetting3P3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3P3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lblSetting3P3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3P3.Location = new System.Drawing.Point(178, 111);
+            this.lblSetting3P3.Location = new System.Drawing.Point(172, 111);
             this.lblSetting3P3.Name = "lblSetting3P3";
             this.lblSetting3P3.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3P3.TabIndex = 449;
-            this.lblSetting3P3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3P3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label81
             // 
             this.label81.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(19, 144);
+            this.label81.Location = new System.Drawing.Point(6, 144);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(154, 32);
+            this.label81.Size = new System.Drawing.Size(161, 32);
             this.label81.TabIndex = 448;
             this.label81.Text = "Stroke Sensor 1 Left";
             this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1157,11 +1157,11 @@
             this.label82.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(19, 111);
+            this.label82.Location = new System.Drawing.Point(6, 111);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(154, 32);
+            this.label82.Size = new System.Drawing.Size(161, 32);
             this.label82.TabIndex = 447;
-            this.label82.Text = "Pressure Sensor 3 Fore";
+            this.label82.Text = "Pressure Sensor 3 Fwd";
             this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label83
@@ -1169,7 +1169,7 @@
             this.label83.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.Location = new System.Drawing.Point(283, 79);
+            this.label83.Location = new System.Drawing.Point(277, 79);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(126, 32);
             this.label83.TabIndex = 446;
@@ -1181,18 +1181,18 @@
             this.lblSetting3P2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3P2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblSetting3P2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3P2.Location = new System.Drawing.Point(178, 78);
+            this.lblSetting3P2.Location = new System.Drawing.Point(172, 78);
             this.lblSetting3P2.Name = "lblSetting3P2";
             this.lblSetting3P2.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3P2.TabIndex = 445;
-            this.lblSetting3P2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3P2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label85
             // 
             this.label85.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(283, 46);
+            this.label85.Location = new System.Drawing.Point(277, 46);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(126, 32);
             this.label85.TabIndex = 444;
@@ -1204,20 +1204,20 @@
             this.lblSetting3P1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSetting3P1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lblSetting3P1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetting3P1.Location = new System.Drawing.Point(178, 45);
+            this.lblSetting3P1.Location = new System.Drawing.Point(172, 45);
             this.lblSetting3P1.Name = "lblSetting3P1";
             this.lblSetting3P1.Size = new System.Drawing.Size(100, 32);
             this.lblSetting3P1.TabIndex = 443;
-            this.lblSetting3P1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSetting3P1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label87
             // 
             this.label87.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(19, 78);
+            this.label87.Location = new System.Drawing.Point(6, 78);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(154, 32);
+            this.label87.Size = new System.Drawing.Size(161, 32);
             this.label87.TabIndex = 442;
             this.label87.Text = "Pressure Sensor 2 Mid";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1227,9 +1227,9 @@
             this.label88.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(19, 45);
+            this.label88.Location = new System.Drawing.Point(6, 45);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(154, 32);
+            this.label88.Size = new System.Drawing.Size(161, 32);
             this.label88.TabIndex = 441;
             this.label88.Text = "Pressure Sensor 1 Aft";
             this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1240,9 +1240,9 @@
             this.label89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label89.ForeColor = System.Drawing.Color.White;
-            this.label89.Location = new System.Drawing.Point(24, 19);
+            this.label89.Location = new System.Drawing.Point(6, 19);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(385, 21);
+            this.label89.Size = new System.Drawing.Size(397, 21);
             this.label89.TabIndex = 440;
             this.label89.Text = "Sensor";
             this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1279,18 +1279,126 @@
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.btnSetGauge);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(857, 3);
+            this.groupBox3.Location = new System.Drawing.Point(833, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(442, 707);
+            this.groupBox3.Size = new System.Drawing.Size(466, 707);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
+            // 
+            // txtSetting3SSInterval
+            // 
+            this.txtSetting3SSInterval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting3SSInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3SSInterval.Location = new System.Drawing.Point(174, 436);
+            this.txtSetting3SSInterval.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSInterval.Name = "txtSetting3SSInterval";
+            this.txtSetting3SSInterval.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSInterval.TabIndex = 503;
+            this.txtSetting3SSInterval.Text = "1";
+            this.txtSetting3SSInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3SSMin
+            // 
+            this.txtSetting3SSMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting3SSMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3SSMin.Location = new System.Drawing.Point(174, 390);
+            this.txtSetting3SSMin.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSMin.Name = "txtSetting3SSMin";
+            this.txtSetting3SSMin.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSMin.TabIndex = 502;
+            this.txtSetting3SSMin.Text = "0";
+            this.txtSetting3SSMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3SSMax
+            // 
+            this.txtSetting3SSMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting3SSMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3SSMax.Location = new System.Drawing.Point(174, 344);
+            this.txtSetting3SSMax.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSMax.Name = "txtSetting3SSMax";
+            this.txtSetting3SSMax.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSMax.TabIndex = 501;
+            this.txtSetting3SSMax.Text = "6000";
+            this.txtSetting3SSMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3ElevationInterval
+            // 
+            this.txtSetting3ElevationInterval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting3ElevationInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3ElevationInterval.Location = new System.Drawing.Point(174, 298);
+            this.txtSetting3ElevationInterval.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationInterval.Name = "txtSetting3ElevationInterval";
+            this.txtSetting3ElevationInterval.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationInterval.TabIndex = 500;
+            this.txtSetting3ElevationInterval.Text = "100";
+            this.txtSetting3ElevationInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3ElevationMin
+            // 
+            this.txtSetting3ElevationMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting3ElevationMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3ElevationMin.Location = new System.Drawing.Point(174, 252);
+            this.txtSetting3ElevationMin.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationMin.Name = "txtSetting3ElevationMin";
+            this.txtSetting3ElevationMin.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationMin.TabIndex = 499;
+            this.txtSetting3ElevationMin.Text = "0";
+            this.txtSetting3ElevationMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3ElevationMax
+            // 
+            this.txtSetting3ElevationMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting3ElevationMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3ElevationMax.Location = new System.Drawing.Point(174, 206);
+            this.txtSetting3ElevationMax.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationMax.Name = "txtSetting3ElevationMax";
+            this.txtSetting3ElevationMax.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationMax.TabIndex = 498;
+            this.txtSetting3ElevationMax.Text = "5";
+            this.txtSetting3ElevationMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3PDLimit
+            // 
+            this.txtSetting3PDLimit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting3PDLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3PDLimit.Location = new System.Drawing.Point(174, 160);
+            this.txtSetting3PDLimit.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3PDLimit.Name = "txtSetting3PDLimit";
+            this.txtSetting3PDLimit.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3PDLimit.TabIndex = 497;
+            this.txtSetting3PDLimit.Text = "8";
+            this.txtSetting3PDLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3PMin
+            // 
+            this.txtSetting3PMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting3PMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3PMin.Location = new System.Drawing.Point(174, 114);
+            this.txtSetting3PMin.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3PMin.Name = "txtSetting3PMin";
+            this.txtSetting3PMin.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3PMin.TabIndex = 496;
+            this.txtSetting3PMin.Text = "0";
+            this.txtSetting3PMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting3PMax
+            // 
+            this.txtSetting3PMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting3PMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting3PMax.Location = new System.Drawing.Point(174, 68);
+            this.txtSetting3PMax.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3PMax.Name = "txtSetting3PMax";
+            this.txtSetting3PMax.Size = new System.Drawing.Size(145, 44);
+            this.txtSetting3PMax.TabIndex = 495;
+            this.txtSetting3PMax.Text = "10";
+            this.txtSetting3PMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(313, 436);
+            this.label1.Location = new System.Drawing.Point(324, 437);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 44);
             this.label1.TabIndex = 494;
@@ -1302,7 +1410,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 436);
+            this.label3.Location = new System.Drawing.Point(16, 437);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 44);
             this.label3.TabIndex = 492;
@@ -1314,7 +1422,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(313, 390);
+            this.label4.Location = new System.Drawing.Point(324, 391);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 44);
             this.label4.TabIndex = 491;
@@ -1326,7 +1434,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(313, 344);
+            this.label6.Location = new System.Drawing.Point(324, 345);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 44);
             this.label6.TabIndex = 489;
@@ -1338,7 +1446,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 390);
+            this.label8.Location = new System.Drawing.Point(16, 391);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(153, 44);
             this.label8.TabIndex = 487;
@@ -1350,7 +1458,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(5, 344);
+            this.label9.Location = new System.Drawing.Point(16, 345);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(153, 44);
             this.label9.TabIndex = 486;
@@ -1362,7 +1470,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(313, 298);
+            this.label10.Location = new System.Drawing.Point(324, 299);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 44);
             this.label10.TabIndex = 485;
@@ -1374,7 +1482,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(313, 252);
+            this.label12.Location = new System.Drawing.Point(324, 253);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(126, 44);
             this.label12.TabIndex = 483;
@@ -1386,7 +1494,7 @@
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(5, 298);
+            this.label14.Location = new System.Drawing.Point(16, 299);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(153, 44);
             this.label14.TabIndex = 481;
@@ -1398,7 +1506,7 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(5, 252);
+            this.label15.Location = new System.Drawing.Point(16, 253);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(153, 44);
             this.label15.TabIndex = 480;
@@ -1410,7 +1518,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(313, 206);
+            this.label16.Location = new System.Drawing.Point(324, 207);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(126, 44);
             this.label16.TabIndex = 479;
@@ -1422,7 +1530,7 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(313, 160);
+            this.label18.Location = new System.Drawing.Point(324, 161);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(126, 44);
             this.label18.TabIndex = 477;
@@ -1434,7 +1542,7 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(5, 206);
+            this.label20.Location = new System.Drawing.Point(16, 207);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(153, 44);
             this.label20.TabIndex = 475;
@@ -1446,7 +1554,7 @@
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(5, 160);
+            this.label21.Location = new System.Drawing.Point(16, 161);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(153, 44);
             this.label21.TabIndex = 474;
@@ -1458,7 +1566,7 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(313, 114);
+            this.label22.Location = new System.Drawing.Point(324, 115);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(126, 44);
             this.label22.TabIndex = 473;
@@ -1470,7 +1578,7 @@
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(313, 68);
+            this.label24.Location = new System.Drawing.Point(324, 69);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(126, 44);
             this.label24.TabIndex = 471;
@@ -1482,7 +1590,7 @@
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(5, 114);
+            this.label26.Location = new System.Drawing.Point(16, 115);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(153, 44);
             this.label26.TabIndex = 469;
@@ -1494,7 +1602,7 @@
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(5, 68);
+            this.label27.Location = new System.Drawing.Point(16, 69);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(153, 44);
             this.label27.TabIndex = 468;
@@ -1507,7 +1615,7 @@
             this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(5, 44);
+            this.label28.Location = new System.Drawing.Point(16, 45);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(434, 21);
             this.label28.TabIndex = 467;
@@ -1517,120 +1625,13 @@
             // btnSetGauge
             // 
             this.btnSetGauge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSetGauge.Location = new System.Drawing.Point(166, 13);
+            this.btnSetGauge.Location = new System.Drawing.Point(177, 14);
             this.btnSetGauge.Name = "btnSetGauge";
             this.btnSetGauge.Size = new System.Drawing.Size(135, 29);
             this.btnSetGauge.TabIndex = 466;
             this.btnSetGauge.Text = "Set Gauge";
             this.btnSetGauge.UseVisualStyleBackColor = true;
-            // 
-            // txtSetting3PMax
-            // 
-            this.txtSetting3PMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtSetting3PMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3PMax.Location = new System.Drawing.Point(162, 67);
-            this.txtSetting3PMax.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3PMax.Name = "txtSetting3PMax";
-            this.txtSetting3PMax.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3PMax.TabIndex = 495;
-            this.txtSetting3PMax.Text = "100";
-            this.txtSetting3PMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3PMin
-            // 
-            this.txtSetting3PMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSetting3PMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3PMin.Location = new System.Drawing.Point(162, 113);
-            this.txtSetting3PMin.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3PMin.Name = "txtSetting3PMin";
-            this.txtSetting3PMin.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3PMin.TabIndex = 496;
-            this.txtSetting3PMin.Text = "100";
-            this.txtSetting3PMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3ElevationMax
-            // 
-            this.txtSetting3ElevationMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSetting3ElevationMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3ElevationMax.Location = new System.Drawing.Point(162, 205);
-            this.txtSetting3ElevationMax.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3ElevationMax.Name = "txtSetting3ElevationMax";
-            this.txtSetting3ElevationMax.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3ElevationMax.TabIndex = 498;
-            this.txtSetting3ElevationMax.Text = "100";
-            this.txtSetting3ElevationMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3PDLimit
-            // 
-            this.txtSetting3PDLimit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtSetting3PDLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3PDLimit.Location = new System.Drawing.Point(162, 159);
-            this.txtSetting3PDLimit.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3PDLimit.Name = "txtSetting3PDLimit";
-            this.txtSetting3PDLimit.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3PDLimit.TabIndex = 497;
-            this.txtSetting3PDLimit.Text = "100";
-            this.txtSetting3PDLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3ElevationInterval
-            // 
-            this.txtSetting3ElevationInterval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSetting3ElevationInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3ElevationInterval.Location = new System.Drawing.Point(162, 297);
-            this.txtSetting3ElevationInterval.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3ElevationInterval.Name = "txtSetting3ElevationInterval";
-            this.txtSetting3ElevationInterval.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3ElevationInterval.TabIndex = 500;
-            this.txtSetting3ElevationInterval.Text = "100";
-            this.txtSetting3ElevationInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3ElevationMin
-            // 
-            this.txtSetting3ElevationMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtSetting3ElevationMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3ElevationMin.Location = new System.Drawing.Point(162, 251);
-            this.txtSetting3ElevationMin.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3ElevationMin.Name = "txtSetting3ElevationMin";
-            this.txtSetting3ElevationMin.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3ElevationMin.TabIndex = 499;
-            this.txtSetting3ElevationMin.Text = "100";
-            this.txtSetting3ElevationMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3SSMin
-            // 
-            this.txtSetting3SSMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSetting3SSMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3SSMin.Location = new System.Drawing.Point(162, 389);
-            this.txtSetting3SSMin.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3SSMin.Name = "txtSetting3SSMin";
-            this.txtSetting3SSMin.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3SSMin.TabIndex = 502;
-            this.txtSetting3SSMin.Text = "100";
-            this.txtSetting3SSMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3SSMax
-            // 
-            this.txtSetting3SSMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtSetting3SSMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3SSMax.Location = new System.Drawing.Point(162, 343);
-            this.txtSetting3SSMax.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3SSMax.Name = "txtSetting3SSMax";
-            this.txtSetting3SSMax.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3SSMax.TabIndex = 501;
-            this.txtSetting3SSMax.Text = "100";
-            this.txtSetting3SSMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3SSInterval
-            // 
-            this.txtSetting3SSInterval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtSetting3SSInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3SSInterval.Location = new System.Drawing.Point(162, 435);
-            this.txtSetting3SSInterval.MinimumSize = new System.Drawing.Size(145, 44);
-            this.txtSetting3SSInterval.Name = "txtSetting3SSInterval";
-            this.txtSetting3SSInterval.Size = new System.Drawing.Size(145, 44);
-            this.txtSetting3SSInterval.TabIndex = 503;
-            this.txtSetting3SSInterval.Text = "100";
-            this.txtSetting3SSInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSetGauge.Click += new System.EventHandler(this.btnSetGauge_Click);
             // 
             // UserControl3
             // 

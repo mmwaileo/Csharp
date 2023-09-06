@@ -18,6 +18,10 @@ using System.Net.Sockets;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Threading;
+//using System.Windows.Controls;
+//using System.Windows.Controls;
 //using System.Windows;
 
 namespace Monitoring_System
@@ -36,8 +40,27 @@ namespace Monitoring_System
         List<PointLatLng> objectLatLngList = new List<PointLatLng>();
         //List<ObjectLatLng> objectDataList = new List<ObjectLatLng>();
         List<GridLineData> gridLineDataList = new List<GridLineData>();
-        PointLatLng currentGPSPoint1 = new PointLatLng(-6.22319424223913, 107.90563044665);
+        GridLineData currentWorkingGridLineData = new GridLineData();
+        PointLatLng currentGPSPoint;
+
+        double currentGPS1Latitude, currentGPS1Longitude;
+        double currentGPS2Latitude, currentGPS2Longitude;
         string workingAreaName = "";
+        bool boolUpdateGPS1GUI =false, boolUpdateGPS2GUI = false, boolUpdateSensorGUI = false;
+        public bool boolIsGPS1Up = false, boolIsGPS2Up = false, boolIsSensorUp = false;
+        string GPS1Mode = "", GPS2Mode = "";
+
+        //for plotting live chart
+        private Random random = new Random();
+        private List<double> p1 = new List<double>();
+        private List<double> p2 = new List<double>();
+        private List<double> p3 = new List<double>();
+        private int movingAverageWindowSize = 10;
+        double dangerousPValue = 8;
+        System.Windows.Forms.Timer t_1SecPlotChart = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer t_1Sec_GPS1GUI = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer t_1Sec_GPS2GUI = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer t_1Sec_SensorGUI = new System.Windows.Forms.Timer();
 
         System.Windows.Forms.Timer t_1Sec = new System.Windows.Forms.Timer();
         System.Windows.Forms.Timer t_5Sec = new System.Windows.Forms.Timer();
@@ -49,6 +72,7 @@ namespace Monitoring_System
 
         PointLatLng GPS1CurrentLocation, GPS2CurrentLocation;
         double currentBearing;
+        double GPS2zHeight;
 
         GMapOverlay vehicleOverlay; // Overlay for the vehicle marker
         GMapOverlay compassOverlay; // Overlay for the compass marker
@@ -60,7 +84,8 @@ namespace Monitoring_System
         private Image originalImage;
         private Image polygonSideImage;
         private Bitmap polygonScaledImage;
-
+        /*
+        //for plotting chart
         int[] xValues = new int[60];
         double[] dangerousValue = new double[60];
         double[] P1ReadingA = new double[60];
@@ -71,18 +96,23 @@ namespace Monitoring_System
         double[] P3ReadingB = new double[60];
         bool isGroupA = true;
         int readingCount = 0;
-
+        */
         bool isAutolet = true;
         bool OnlyNumberInTxtBearing = false;
 
         double autolet;
         double levelSensor;
-        double inclinometer1;
+        double inclinometer1, inclinometer2;
+        double p1SensorReading;
+        double p2SensorReading;
+        double p3SensorReading;
+        int strokeSensor1, strokeSensor2;
 
         double utmSPUD_X, utmSPUD_Y;
         double utmDMX, utmDMY, utmDMZ;
         double utmGPS1X, utmGPS1Y, utmGPS1Z;
         double utmGPS2X, utmGPS2Y, utmGPS2Z;
+        int GPS1FixQuality, GPS2FixQuality;
 
         string bargeName = "AMOS16";
         string startArea = "";//"C6";
@@ -105,25 +135,32 @@ namespace Monitoring_System
         double setting2T = 1.5;   //no information yet
         double setting2U = 2;   // no information yet
 
+        private UserControl1 userControl1;
+        private UserControl2 userControl2;
+        private UserControl3 userControl3;
         public Form1()
         {
             InitializeComponent();
             InitializeGMap();
             LoadImageIntoPictureBox();
-            InitXData();
+            //InitXData();
+            InitializeChart();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             /*
-            userControl11.Hide();
-            userControl21.Hide();
-            userControl31.Hide();
+            //timer for 1 sec to plot chart
+            t_1SecPlotChart.Interval = 1000;    //in millisecond
+            t_1SecPlotChart.Tick += new EventHandler(this.timer1_TickPlotChart);
+            t_1SecPlotChart.Start();
             */
-
+            
             //timer for 1 sec
             t_1Sec.Interval = 1000;    //in millisecond
             t_1Sec.Tick += new EventHandler(this.t_Tick_1Sec);
             t_1Sec.Start();
+            
             /*
             string ipAddress1 = "192.168.0.2"; // GPS1 Reading
             int port1 = 5017; // GPS1 port through RS232 to ethernet converter
@@ -152,12 +189,12 @@ namespace Monitoring_System
                 //Console.WriteLine($"The IP address {ipAddress} and port {port} is not available.");
             }
             */
-            /*
+            
             //timer for 5 seconds
             t_5Sec.Interval = 5000;    //in millisecond
             t_5Sec.Tick += new EventHandler(this.t_Tick_5Sec);
             t_5Sec.Start();
-
+            /*
             //timer for 1 minute
             t_1Min.Interval = 60000;    //in millisecond
             t_1Min.Tick += new EventHandler(this.t_Tick_1Min);
@@ -167,7 +204,160 @@ namespace Monitoring_System
             verticalBar1.targetValue = 75;
             verticalBar1.tolerance = 10;
             btnMonitoring.BackColor = Color.Green;
+
+            // Create an instance of the user control and add it to the main form
+            userControl1 = new UserControl1();
+            userControl1.Dock = DockStyle.Fill;
+            userControl1.SetDimension_Click += UserControl1_SetDimensionClicked;
+            userControl1.SetDraft_Click += UserControl1_SetDraftClicked;
+            Controls.Add(userControl1);
+            //userControl1.BringToFront();
+            
+            userControl2 = new UserControl2();
+            userControl2.Dock = DockStyle.Fill;
+            userControl2.SetDimension_Click += UserControl2_SetDimensionClicked;
+            Controls.Add(userControl2);
+           // userControl2.BringToFront();
+
+            userControl3 = new UserControl3();
+            userControl3.Dock = DockStyle.Fill;
+            userControl3.SetGauge_Click += UserControl3_SetGaugeClicked;
+            Controls.Add(userControl3);
+           // userControl3.BringToFront();
+            
+            userControl1.Hide();
+            userControl2.Hide();
+            userControl3.Hide();
         }
+        private void StartGPS1Timer()
+        {
+            if (boolIsGPS1Up && !t_1Sec_GPS1GUI.Enabled)
+            {
+                //timer for 1 sec
+                t_1Sec_GPS1GUI.Interval = 1000;    //in millisecond
+                t_1Sec_GPS1GUI.Tick += new EventHandler(this.t_Tick_1Sec_GPS1GUI);
+                t_1Sec_GPS1GUI.Start();
+            }
+            else if(!boolIsGPS1Up && t_1Sec_GPS1GUI.Enabled)
+            {
+                t_1Sec_GPS1GUI.Stop();
+            }
+        }
+        private void StartGPS2Timer()
+        {
+            if (boolIsGPS2Up && !t_1Sec_GPS2GUI.Enabled)
+            {
+                //timer for 1 sec
+                t_1Sec_GPS2GUI.Interval = 1000;    //in millisecond
+                t_1Sec_GPS2GUI.Tick += new EventHandler(this.t_Tick_1Sec_GPS2GUI);
+                t_1Sec_GPS2GUI.Start();
+            }
+            else if (!boolIsGPS2Up && t_1Sec_GPS2GUI.Enabled)
+            {
+                t_1Sec_GPS2GUI.Stop();
+            }
+        }
+        private void StartSensorTimer()
+        {
+            if (boolIsSensorUp && !t_1Sec_SensorGUI.Enabled)
+            {
+                //timer for 1 sec
+                t_1Sec_SensorGUI.Interval = 1000;    //in millisecond
+                t_1Sec_SensorGUI.Tick += new EventHandler(this.t_Tick_1Sec_SensorGUI);
+                t_1Sec_SensorGUI.Start();
+            }
+            else if (!boolIsSensorUp && t_1Sec_SensorGUI.Enabled)
+            {
+                t_1Sec_SensorGUI.Stop();
+            }
+            
+        }
+        private void StartChartPlottingTimer()
+        {
+            if (boolIsSensorUp && !t_1Sec_SensorGUI.Enabled)
+            {
+                //timer for 1 sec to plot chart
+                t_1SecPlotChart.Interval = 1000;    //in millisecond
+                t_1SecPlotChart.Tick += new EventHandler(this.timer1_TickPlotChart);
+                t_1SecPlotChart.Start();
+            }
+            else if (!boolIsSensorUp && t_1Sec_SensorGUI.Enabled)
+            {
+                t_1SecPlotChart.Stop();
+            }
+
+            
+        }
+        private void t_Tick_1Sec_GPS1GUI(object sender, EventArgs e)
+        {
+            //1 second timer for GPS1 GUI
+            ReadGPS1();
+            UpdateGPS1GUI();
+        }
+        private void t_Tick_1Sec_GPS2GUI(object sender, EventArgs e)
+        {
+            //1 second timer for GPS2 GUI
+            ReadGPS2();
+            UpdateGPS2GUI();
+        }
+        private void t_Tick_1Sec_SensorGUI(object sender, EventArgs e)
+        {
+            //1 second timer for Sensor GUI
+            ReadSensor();
+            UpdateSensorDataGUI();
+        }
+        private void t_Tick_1Sec(object sender, EventArgs e)
+        {
+            //1 second timer
+            ShowDateTime();
+
+        }
+
+        private void t_Tick_5Sec(object sender, EventArgs e)
+        {
+            StartGPS1Timer();
+            StartGPS2Timer();
+            StartSensorTimer();
+            StartChartPlottingTimer();
+            GetCurrentWorkingAreaName(currentGPSPoint);
+            UpdateUserControl3GUI();
+        }
+
+        private void t_Tick_1Min(object sender, EventArgs e)
+        {
+            // 1 minute timer
+
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            t_1Sec.Stop();
+            t_5Sec.Stop();
+            t_1Min.Stop();
+            t_1SecPlotChart.Stop();
+        }
+        private void UserControl1_SetDraftClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UserControl1_SetDimensionClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UserControl2_SetDimensionClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        //event handler for set gauge event in userControl3 (setting 3)
+        private void UserControl3_SetGaugeClicked(object sender, EventArgs e)
+        {
+           // MessageBox.Show("Setting 3 Event show");
+
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             // Specify the line's properties
@@ -220,6 +410,7 @@ namespace Monitoring_System
 
             g.FillPolygon(Brushes.Black, arrowPoints);
         }
+        /*
         public void InitXData()
         {
             for (int i = 0; i < 60; i++)
@@ -228,6 +419,21 @@ namespace Monitoring_System
                 dangerousValue[i] = 8;
             }
         }
+        */
+        public bool IsGPS1Up()
+        {
+            return IsTCPServerUp("192.168.0.7", 23, 1000); //GPS1 TCP server and port
+        }
+        public bool IsGPS2Up()
+        {
+            return IsTCPServerUp("192.168.0.2", 5017, 1000); //GPS2 TCP server and port
+        }
+        /*
+        public static bool IsPLCUp()
+        {
+            return IsTCPServerUp("192.168.0.7", 23, 1000); //PLC TCP server and port
+        }
+        */
         static bool IsIpAddressAndPortAvailable(string ipAddress, int port)
         {
             using (TcpClient tcpClient = new TcpClient())
@@ -245,58 +451,42 @@ namespace Monitoring_System
                 }
             }
         }
-        private void t_Tick_1Sec(object sender, EventArgs e)
+        public static bool IsTCPServerUp(string server, int port, int timeout)
         {
-            //1 second timer
-            ShowDateTime();
-        }
+            bool isUp;
 
-        private void t_Tick_5Sec(object sender, EventArgs e)
-        {
-            //5 seconds timer
-            ReadGPS1Data();
-            ReadGPS2Data();
-            ReadSensorsData();
-
-            if (GPS1CurrentLocation.Lat != 0 && GPS2CurrentLocation.Lat != 0)
+            try
             {
-                currentBearing = CalculateBearing(GPS1CurrentLocation, GPS2CurrentLocation);
+                using (TcpClient tcp = new TcpClient())
+                {
+                    IAsyncResult ar = tcp.BeginConnect(server, port, null, null);
+                    WaitHandle wh = ar.AsyncWaitHandle;
+
+                    try
+                    {
+                        if (!wh.WaitOne(TimeSpan.FromMilliseconds(timeout), false))
+                        {
+                            tcp.EndConnect(ar);
+                            tcp.Close();
+                            throw new SocketException();
+                        }
+
+                        isUp = true;
+                        tcp.EndConnect(ar);
+                    }
+                    finally
+                    {
+                        wh.Close();
+                    }
+                }
+            }
+            catch (SocketException e)
+            {
+                MessageBox.Show(string.Format("TCP connection to server {0} failed.", server));
+                isUp = false;
             }
 
-            SPUDCalculation();
-            DischargeMouthCalculation();
-
-            lblDischargeMouthX.Text = Convert.ToString(utmDMX);
-            lblDischargeMouthY.Text = Convert.ToString(utmDMY);
-            lblDischargeMouthZ.Text = Convert.ToString(utmDMZ);
-            lblSpudX.Text = Convert.ToString(utmSPUD_X); //utmSPUD_X
-            lblSpudY.Text = Convert.ToString(utmSPUD_Y); //utmSPUD_Y
-                                                         // lblSpudZ.Text = Convert.ToString(utmDMZ);
-
-            if (GPS1CurrentLocation.Lat != 0)
-            {
-                GetCurrentWorkingAreaName(GPS1CurrentLocation);
-
-            }
-
-            vehicleMarker.Bearing = (float)(currentBearing - 90);
-            vehicleMarker.Position = GPS1CurrentLocation;
-            // gmap.Position = GPS1CurrentLocation;
-            gmap.Refresh();
-
-            Refresh();
-        }
-
-        private void t_Tick_1Min(object sender, EventArgs e)
-        {
-            // 1 minute timer
-
-        }
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            t_1Sec.Stop();
-            t_5Sec.Stop();
-            t_1Min.Stop();
+            return isUp;
         }
         private void ShowDateTime()
         {
@@ -309,7 +499,80 @@ namespace Monitoring_System
             //lblTime.Text = currentTime.ToString("h:mm tt");
             lblTime.Text = currentTime.ToString("HHmm");
         }
+        private void InitializeChart()
+        {
+            chart1.Series.Clear();
+            chart1.Series.Add("P1");
+            chart1.Series.Add("P2");
+            chart1.Series.Add("P3");
+            chart1.Series.Add("D Value");
 
+            chart1.Series["P1"].ChartType = SeriesChartType.Line;
+            chart1.Series["P2"].ChartType = SeriesChartType.Line;
+            chart1.Series["P3"].ChartType = SeriesChartType.Line;
+            chart1.Series["D Value"].ChartType = SeriesChartType.Line;
+            chart1.Series["D Value"].BorderWidth = 3;
+            chart1.Series["D Value"].Color = Color.Red;
+
+            // Set Title and axis labels
+            chart1.ChartAreas[0].AxisX.Title = "Seconds";
+            chart1.ChartAreas[0].AxisY.Title = "Pressure(bar)";
+        }
+
+        private void timer1_TickPlotChart(object sender, EventArgs e)
+        {
+            /*
+            double newDataPoint = random.NextDouble() * 10; // Generate random data
+            p1.Add(newDataPoint);
+            double newDataPoint2 = random.NextDouble() * 9.5; // Generate random data
+            p2.Add(newDataPoint2);
+            double newDataPoint3 = random.NextDouble() * 9; // Generate random data
+            p3.Add(newDataPoint3);
+
+            userControl3.P1 = Convert.ToString(newDataPoint);
+            userControl3.P2 = Convert.ToString(newDataPoint2);
+            userControl3.P3 = Convert.ToString(newDataPoint3);
+            */
+            
+            p1.Add(p1SensorReading);
+            p2.Add(p2SensorReading);
+            p3.Add(p3SensorReading);
+            
+            if (p1.Count > movingAverageWindowSize)
+                p1.RemoveAt(0);
+            if (p2.Count > movingAverageWindowSize)
+                p2.RemoveAt(0);
+            if (p3.Count > movingAverageWindowSize)
+                p3.RemoveAt(0);
+
+            double movingAverageP1 = CalculateMovingAverage(p1);
+            double movingAverageP2 = CalculateMovingAverage(p2);
+            double movingAverageP3 = CalculateMovingAverage(p3);
+
+            chart1.Series["P1"].Points.AddY(movingAverageP1);
+            chart1.Series["P2"].Points.AddY(movingAverageP2);
+            chart1.Series["P3"].Points.AddY(movingAverageP3);
+            chart1.Series["D Value"].Points.AddY(dangerousPValue);
+
+            if (chart1.Series["P1"].Points.Count > 60) // Keep a reasonable number of points on the chart
+            {
+                chart1.Series["P1"].Points.RemoveAt(0);
+                chart1.Series["P2"].Points.RemoveAt(0);
+                chart1.Series["P3"].Points.RemoveAt(0);
+                chart1.Series["D Value"].Points.RemoveAt(0);
+            }
+        }
+
+        private double CalculateMovingAverage(List<double> values)
+        {
+            double sum = 0;
+            foreach (double value in values)
+            {
+                sum += value;
+            }
+            return sum / values.Count;
+        }
+        /*
         private void PlotChart()
         {
             if (isGroupA)
@@ -322,6 +585,7 @@ namespace Monitoring_System
                     P3ReadingA[i] = random.Next(10, 20);
                 }
                 */
+        /*
                 chart1.Series[0].Points.DataBindXY(xValues, P1ReadingA);
                 chart1.Series[1].Points.DataBindXY(xValues, P2ReadingA);
                 chart1.Series[2].Points.DataBindXY(xValues, P3ReadingA);
@@ -348,6 +612,7 @@ namespace Monitoring_System
                     P3ReadingB[i] = random.Next(3, 6);
                 }
                 */
+        /*
                 chart1.Series[0].Points.DataBindXY(xValues, P1ReadingB);
                 chart1.Series[1].Points.DataBindXY(xValues, P2ReadingB);
                 chart1.Series[2].Points.DataBindXY(xValues, P3ReadingB);
@@ -365,8 +630,60 @@ namespace Monitoring_System
                 isGroupA = !isGroupA;
             }
         }
+        */
+        private async void ReadGPS1()
+        {
+            //ReadGPS1Data();
+            // Run the time-consuming operation on a background thread
+            bool success = await Task.Run(() => ReadGPS1Data());
 
-        public void ReadGPS1Data()
+            if (success)
+            {
+                lblStatus.Text = "Connected to GPS1 successfully!";
+                boolIsGPS1Up = true;
+            }
+            else
+            {
+                lblStatus.Text = "Connection to GPS1 failed!";
+                boolIsGPS1Up = false;
+            }
+        }
+        private async void ReadGPS2()
+        {
+            //ReadGPS2Data();
+            // Run the time-consuming operation on a background thread
+            bool success = await Task.Run(() => ReadGPS2Data());
+
+            if (success)
+            {
+                lblStatus.Text = "Connected to GPS2 successfully!";
+                boolIsGPS2Up = true;
+            }
+            else
+            {
+                lblStatus.Text = "Connection to GPS2 failed!";
+                boolIsGPS2Up = false;
+            }
+        }
+        private async void ReadSensor()
+        {
+            //ReadSensorsData();
+            // Run the time-consuming operation on a background thread
+            bool success = await Task.Run(() => ReadSensorsData());
+
+            if (success)
+            {
+                lblStatus.Text = "Reading of Sensor Data successful!";
+                boolIsSensorUp = true;
+            }
+            else
+            {
+                lblStatus.Text = "Reading of Sensor Data failed!";
+                boolIsSensorUp = false;
+            }
+        }
+
+        public bool ReadGPS1Data()
         {
             // Set the server IP address and port
             // direct readin from GPS1 receiver "169.254.1.0" port 5017
@@ -403,64 +720,39 @@ namespace Monitoring_System
                     string latDirection = fields[3];//N or S for North and South
                     double longitude = Convert.ToDouble(fields[4]);
                     string lonDirection = fields[5]; //E or W for west and East
-                    int fixQuality = Convert.ToInt32(fields[6]); //DGPS if 1 or 2, RTK if 4 or 5, GPS fail if others
+                    GPS1FixQuality = Convert.ToInt32(fields[6]); //DGPS if 1 or 2, RTK if 4 or 5, GPS fail if others
                     double zHeight = Convert.ToDouble(fields[9]); // Z axis Height in Meters
 
                     // Convert latitude and longitude to decimal degrees format
-                    latitude = ConvertToDecimalDegrees(latitude, latDirection);
-                    longitude = ConvertToDecimalDegrees(longitude, lonDirection);
+                    currentGPS1Latitude = ConvertToDecimalDegrees(latitude, latDirection);
+                    currentGPS1Longitude = ConvertToDecimalDegrees(longitude, lonDirection);
 
                     //convert to UTM coordinate
                     UTMResult utmResult = utmLatLngConvert.convertLatLngToUtm(latitude, longitude);
 
                     utmGPS1X = Math.Round(utmResult.Northing, 2);
                     utmGPS1Y = Math.Round(utmResult.Easting, 2);
-                    //utmGPS1Z = Math.Round(zHeight, 2);
+                    utmGPS1Z = Math.Round(zHeight, 2);
+                   // utmGPS1Z = zHeight;
 
-                    //update to display
-                    lblGPS1X.Text = "X: " + Convert.ToString(utmGPS1X);
-                    lblGPS1Y.Text = "Y: " + Convert.ToString(utmGPS1Y);
-                    lblGPS1Z.Text = "Z: " + Convert.ToString(zHeight);
-
-                    /*
-                    //update to display
-                    lblGPS1X.Text = "X: " + Convert.ToString(latitude);
-                    lblGPS1Y.Text = "Y: " + Convert.ToString(longitude);
-                    lblGPS1Z.Text = "Z: " + Convert.ToString(zHeight);
-                    */
-                    GPS1CurrentLocation = new PointLatLng(latitude, longitude);
-
-                    if (fixQuality == 1 || fixQuality == 2)
-                    {
-                        lblGPS1RTK.BackColor = Color.Yellow;
-                        lblGPS1RTK.Text = "DGPS";
-                    }
-                    else if (fixQuality == 4 || fixQuality == 5)
-                    {
-                        lblGPS1RTK.BackColor = Color.Green;
-                        lblGPS1RTK.Text = "RTK";
-                    }
-                    else
-                    {
-                        lblGPS1RTK.BackColor = Color.Red;
-                        lblGPS1RTK.Text = "Fail";
-                    }
-                    //Invalidate();
-                    Refresh();
+                    
                 }
 
                 // Close the client connection
                 client.Close();
                 // Console.WriteLine("Disconnected from server.");
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
                 // Console.WriteLine("An error occurred: " + ex.Message);
+                boolIsGPS2Up = false;
+                return false;
             }
 
         }
-        public void ReadGPS2Data()
+        public bool ReadGPS2Data()
         {
             // Set the server IP address and port
             // direct readin from GPS1 receiver "169.254.1.0"
@@ -497,60 +789,30 @@ namespace Monitoring_System
                     string latDirection = fields[3];//N or S for North and South
                     double longitude = Convert.ToDouble(fields[4]);
                     string lonDirection = fields[5]; //E or W for west and East
-                    int fixQuality = Convert.ToInt32(fields[6]); //DGPS if 1 or 2, RTK if 4 or 5, GPS fail if others
-                    double zHeight = Convert.ToDouble(fields[9]); // Z axis Height in Meters
+                    GPS2FixQuality = Convert.ToInt32(fields[6]); //DGPS if 1 or 2, RTK if 4 or 5, GPS fail if others
+                    GPS2zHeight = Convert.ToDouble(fields[9]); // Z axis Height in Meters
 
                     // Convert latitude and longitude to decimal degrees format
-                    latitude = ConvertToDecimalDegrees(latitude, latDirection);
-                    longitude = ConvertToDecimalDegrees(longitude, lonDirection);
-
+                    currentGPS2Latitude = ConvertToDecimalDegrees(latitude, latDirection);
+                    currentGPS1Longitude = ConvertToDecimalDegrees(longitude, lonDirection);
+                    currentGPSPoint = new PointLatLng(currentGPS2Latitude, currentGPS1Longitude);
                     //convert to UTM coordinate
                     UTMResult utmResult = utmLatLngConvert.convertLatLngToUtm(latitude, longitude);
                     utmGPS2X = Math.Round(utmResult.Northing, 2);
                     utmGPS2Y = Math.Round(utmResult.Easting, 2);
-                    utmGPS2Z = Math.Round(zHeight, 2);
-
-                    //update to display
-                    lblGPS2X.Text = "X: " + Convert.ToString(utmGPS2X);
-                    lblGPS2Y.Text = "Y: " + Convert.ToString(utmGPS2Y);
-                    lblGPS2Z.Text = "Z: " + Convert.ToString(zHeight);
-
-                    /*
-                    //update to display
-                    lblGPS2X.Text = "X:" + Convert.ToString(latitude);
-                    lblGPS2Y.Text = "Y:" + Convert.ToString(longitude);
-                    lblGPS2Z.Text = "Z:" + Convert.ToString(zHeight);
-                    */
-                    GPS2CurrentLocation = new PointLatLng(latitude, longitude);
-
-                    if (fixQuality == 1 || fixQuality == 2)
-                    {
-                        lblGPS2RTK.BackColor = Color.Yellow;
-                        lblGPS2RTK.Text = "DGPS";
-                    }
-                    else if (fixQuality == 4 || fixQuality == 5)
-                    {
-                        lblGPS2RTK.BackColor = Color.Green;
-                        lblGPS2RTK.Text = "RTK";
-                    }
-                    else
-                    {
-                        lblGPS2RTK.BackColor = Color.Red;
-                        lblGPS2RTK.Text = "Fail";
-                    }
-                    //Invalidate();
-                    Refresh();
+                    utmGPS2Z = Math.Round(GPS2zHeight, 2);
                 }
-
-
                 // Close the client connection
                 client.Close();
                 // Console.WriteLine("Disconnected from server.");
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
                 //Console.WriteLine("An error occurred: " + ex.Message);
+                boolIsGPS2Up = false;
+                return false;
             }
 
         }
@@ -597,7 +859,7 @@ namespace Monitoring_System
 
             return Math.Round(initialBearing, 2);
         }
-        public void ReadSensorsData()
+        public bool ReadSensorsData()
         {
             try
             {
@@ -612,7 +874,7 @@ namespace Monitoring_System
                 {
                     //  Console.WriteLine(client.ErrorText(result));
                     //Console.ReadKey();
-                    return;
+                    //return;
                 }
 
                 //-------------- Read db1
@@ -628,7 +890,7 @@ namespace Monitoring_System
                 {
                     //   Console.WriteLine("Error in Reading DB1");
                     //Console.ReadKey();
-                    return;
+                    //return;
                 }
                 /*
                 //Reading for Siemens PLC S7-1200 DB1 data base 
@@ -641,26 +903,126 @@ namespace Monitoring_System
                 ushort db1dbd16 = S7.GetWordAt(readBuffer, 16);
                 */
                 autolet = S7.GetRealAt(readBuffer, 0); //0-25meters declare global
-                double pressureSensor1 = S7.GetRealAt(readBuffer, 4); //0-10bars
-                double pressureSensor2 = S7.GetRealAt(readBuffer, 8); //0-10bars
-                double pressureSensor3 = S7.GetRealAt(readBuffer, 12); //0-10bars
-                int strokeSensor1 = S7.GetDIntAt(readBuffer, 16);//0-6000mm
-                int strokeSensor2 = S7.GetDIntAt(readBuffer, 20);//0-6000mm
+                p1SensorReading = S7.GetRealAt(readBuffer, 4); //0-10bars
+                p2SensorReading = S7.GetRealAt(readBuffer, 8); //0-10bars
+                p3SensorReading = S7.GetRealAt(readBuffer, 12); //0-10bars
+                strokeSensor1 = S7.GetDIntAt(readBuffer, 16);//0-6000mm
+                strokeSensor2 = S7.GetDIntAt(readBuffer, 20);//0-6000mm
                 levelSensor = S7.GetRealAt(readBuffer, 24); //0-10meters declare global
                 inclinometer1 = S7.GetRealAt(readBuffer, 28); //Y-Axis -2 to +2 degree Heel
-                double inclinometer2 = S7.GetRealAt(readBuffer, 32); //X-axis  -5 to +5 degree Trim
+                inclinometer2 = S7.GetRealAt(readBuffer, 32); //X-axis  -5 to +5 degree Trim
 
                 // Disconnect the client connection
                 client.Disconnect();
 
                 autolet = Math.Round(autolet, 2);
-                pressureSensor1 = Math.Round(pressureSensor1, 2);
-                pressureSensor2 = Math.Round(pressureSensor2, 2);
-                pressureSensor3 = Math.Round(pressureSensor3, 2);
+                p1SensorReading = Math.Round(p1SensorReading, 2);
+                p2SensorReading = Math.Round(p2SensorReading, 2);
+                p3SensorReading = Math.Round(p3SensorReading, 2);
                 levelSensor = Math.Round(levelSensor, 2);
                 inclinometer1 = Math.Round(inclinometer1, 2);
                 inclinometer2 = Math.Round(inclinometer2, 2);
+                boolIsSensorUp = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                boolIsSensorUp = false;
+                return false;
+            }
+        }
+        private void UpdateGPS1GUI()
+        {
+            try
+            {
+                //update to display GPS1
+                lblGPS1X.Text = "X: " + Convert.ToString(utmGPS1X);
+                lblGPS1Y.Text = "Y: " + Convert.ToString(utmGPS1Y);
+                lblGPS1Z.Text = "Z: " + Convert.ToString(utmGPS1Z);
 
+                /*
+                //update to display
+                lblGPS1X.Text = "X: " + Convert.ToString(latitude);
+                lblGPS1Y.Text = "Y: " + Convert.ToString(longitude);
+                lblGPS1Z.Text = "Z: " + Convert.ToString(zHeight);
+                */
+                GPS1CurrentLocation = new PointLatLng(currentGPS1Latitude, currentGPS1Longitude);
+
+                if (GPS1FixQuality == 1 || GPS1FixQuality == 2)
+                {
+                    lblGPS1RTK.BackColor = Color.Yellow;
+                    lblGPS1RTK.Text = "DGPS";
+                    GPS1Mode = "DGPS";
+                }
+                else if (GPS1FixQuality == 4 || GPS1FixQuality == 5)
+                {
+                    lblGPS1RTK.BackColor = Color.Green;
+                    lblGPS1RTK.Text = "RTK";
+                    GPS1Mode = "RTK";
+                }
+                else
+                {
+                    lblGPS1RTK.BackColor = Color.Red;
+                    lblGPS1RTK.Text = "Fail";
+                    GPS1Mode = "Fail";
+                }
+                //Invalidate();
+                Refresh();
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+
+        }
+        private void UpdateGPS2GUI()
+        {
+            try
+            {
+                //update to display
+                lblGPS2X.Text = "X: " + Convert.ToString(utmGPS2X);
+                lblGPS2Y.Text = "Y: " + Convert.ToString(utmGPS2Y);
+                lblGPS2Z.Text = "Z: " + Convert.ToString(GPS2zHeight);
+
+                /*
+                //update to display
+                lblGPS2X.Text = "X:" + Convert.ToString(latitude);
+                lblGPS2Y.Text = "Y:" + Convert.ToString(longitude);
+                lblGPS2Z.Text = "Z:" + Convert.ToString(zHeight);
+                */
+                GPS2CurrentLocation = new PointLatLng(currentGPS2Latitude, currentGPS2Longitude);
+
+                if (GPS2FixQuality == 1 || GPS2FixQuality == 2)
+                {
+                    lblGPS2RTK.BackColor = Color.Yellow;
+                    lblGPS2RTK.Text = "DGPS";
+                    GPS2Mode = "DGPS";
+                }
+                else if (GPS2FixQuality == 4 || GPS2FixQuality == 5)
+                {
+                    lblGPS2RTK.BackColor = Color.Green;
+                    lblGPS2RTK.Text = "RTK";
+                    GPS2Mode = "RTK";
+                }
+                else
+                {
+                    lblGPS2RTK.BackColor = Color.Red;
+                    lblGPS2RTK.Text = "Fail";
+                    GPS2Mode = "Fail";
+                }
+                //Invalidate();
+                Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+        private void UpdateSensorDataGUI()
+        {
+            try
+            {
                 if (isAutolet)
                 {
                     if (autolet >= 0 && autolet <= 25)
@@ -679,22 +1041,22 @@ namespace Monitoring_System
                     }
 
                 }
-                if (pressureSensor1 >= 0 && pressureSensor1 <= 10)
+                if (p1SensorReading >= 0 && p1SensorReading <= 10)
                 {
-                    lblP1Gauge.Text = Convert.ToString(pressureSensor1) + " bar";
-                    lblP2Gauge.Text = Convert.ToString(pressureSensor2) + " bar";
-                    lblP3Gauge.Text = Convert.ToString(pressureSensor3) + " bar";
+                    lblP1Gauge.Text = Convert.ToString(p1SensorReading) + " bar";
+                    lblP2Gauge.Text = Convert.ToString(p2SensorReading) + " bar";
+                    lblP3Gauge.Text = Convert.ToString(p3SensorReading) + " bar";
                 }
 
-                lblLadderStroke1.Text = Convert.ToString(strokeSensor1) + " [mm]"; //stroke sensor 1
+                lblLadderStroke1.Text = Convert.ToString(strokeSensor1) + " [mm]"; //stroke sensor 1 0-6000mm
                 lblLadderStroke2.Text = Convert.ToString(strokeSensor2) + " [mm]"; //stroke sensor 2
 
                 lblTrim.Text = Convert.ToString(inclinometer1) + " deg";
                 lblHeel.Text = Convert.ToString(inclinometer2) + " deg";
 
-                if (pressureSensor1 >= 0 && pressureSensor1 <= 10)
+                if (p1SensorReading >= 0 && p1SensorReading <= 10)
                 {
-                    gaugeControl1.Value = (int)(10 * pressureSensor1); // scaling since gauge control has 0-100 and reading has 0-10 bars
+                    gaugeControl1.Value = (int)(10 * p1SensorReading); // scaling since gauge control has 0-100 and reading has 0-10 bars
                     lblP1Normal.BackColor = Color.LightGreen;
                     lblP1Normal.Text = "Normal";
                 }
@@ -704,9 +1066,9 @@ namespace Monitoring_System
                     lblP1Normal.Text = "Fail";
                 }
 
-                if (pressureSensor2 >= 0 && pressureSensor2 <= 10)
+                if (p2SensorReading >= 0 && p2SensorReading <= 10)
                 {
-                    gaugeControl2.Value = (int)(10 * pressureSensor2); // scaling since gauge control has 0-100 and reading has 0-10 bars
+                    gaugeControl2.Value = (int)(10 * p2SensorReading); // scaling since gauge control has 0-100 and reading has 0-10 bars
                     lblP2Normal.BackColor = Color.LightGreen;
                     lblP2Normal.Text = "Normal";
                 }
@@ -716,9 +1078,9 @@ namespace Monitoring_System
                     lblP2Normal.Text = "Fail";
                 }
 
-                if (pressureSensor3 >= 0 && pressureSensor3 <= 10)
+                if (p3SensorReading >= 0 && p3SensorReading <= 10)
                 {
-                    gaugeControl3.Value = (int)(10 * pressureSensor3); // scaling since gauge control has 0-100 and reading has 0-10 bars
+                    gaugeControl3.Value = (int)(10 * p3SensorReading); // scaling since gauge control has 0-100 and reading has 0-10 bars
                     lblP3Normal.BackColor = Color.LightGreen;
                     lblP3Normal.Text = "Normal";
                 }
@@ -751,25 +1113,25 @@ namespace Monitoring_System
                     lblSS2Normal.BackColor = Color.Red;
                     lblSS2Normal.Text = "Fail";
                 }
-
+                /*
                 if (isGroupA)
                 {
-                    P1ReadingA[readingCount] = pressureSensor1;
-                    P2ReadingA[readingCount] = pressureSensor2;
-                    P3ReadingA[readingCount++] = pressureSensor3;
+                    P1ReadingA[readingCount] = p1SensorReading;
+                    P2ReadingA[readingCount] = p2SensorReading;
+                    P3ReadingA[readingCount++] = p3SensorReading;
                 }
                 else
                 {
-                    P1ReadingB[readingCount] = pressureSensor1;
-                    P2ReadingB[readingCount] = pressureSensor2;
-                    P3ReadingB[readingCount++] = pressureSensor3;
+                    P1ReadingB[readingCount] = p1SensorReading;
+                    P2ReadingB[readingCount] = p2SensorReading;
+                    P3ReadingB[readingCount++] = p3SensorReading;
                 }
                 if (readingCount >= 59)
                 {
-                    PlotChart();
+                    //PlotChart();
                     readingCount = 0;
                 }
-
+                */
                 // Rotate the image
                 Image rotatedImage = RotateImage(polygonSideImage, (int)inclinometer1);
                 // Display the rotated image in the PictureBox control
@@ -777,12 +1139,47 @@ namespace Monitoring_System
 
                 //Invalidate();
                 Refresh();
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
+        }
+        private void UpdateUserControl3GUI()
+        {
+            userControl3.Time = DateTime.Now.ToString();
+            userControl3.GPS1xValue = Convert.ToString(utmGPS1X);
+            userControl3.GPS1yValue = Convert.ToString(utmGPS1Y);
+            userControl3.GPS1Mode = Convert.ToString(GPS1Mode);
+
+            userControl3.GPS2xValue = Convert.ToString(utmGPS2X);
+            userControl3.GPS2yValue = Convert.ToString(utmGPS2Y);
+            userControl3.GPS2Mode = Convert.ToString(GPS2Mode);
+
+            userControl3.Heading = txtBearing.Text;
+
+            userControl3.WorkingArea = workingAreaName;
+
+            userControl3.X1 = Convert.ToString(currentWorkingGridLineData.x1);
+            userControl3.Y1 = Convert.ToString(currentWorkingGridLineData.y1);
+            userControl3.X2 = Convert.ToString(currentWorkingGridLineData.x2);
+            userControl3.Y2 = Convert.ToString(currentWorkingGridLineData.y2);
+            userControl3.X3 = Convert.ToString(currentWorkingGridLineData.x3);
+            userControl3.Y3 = Convert.ToString(currentWorkingGridLineData.y3);
+            userControl3.X4 = Convert.ToString(currentWorkingGridLineData.x4);
+            userControl3.Y4 = Convert.ToString(currentWorkingGridLineData.y4);
+
+            userControl3.P1 = Convert.ToString(p1SensorReading);
+            userControl3.P2 = Convert.ToString(p2SensorReading);
+            userControl3.P3 = Convert.ToString(p3SensorReading);
+
+            userControl3.SS1 = Convert.ToString(strokeSensor1);
+            userControl3.SS2 = Convert.ToString(strokeSensor2);
+            userControl3.Trim = Convert.ToString(inclinometer2);
+            userControl3.Heel = Convert.ToString(inclinometer1);
+            userControl3.TideGauge = Convert.ToString(2); //need to add when available now not included yet
+            userControl3.LevelSensor = Convert.ToString(levelSensor);
+            userControl3.Autolet = Convert.ToString(autolet);
         }
         private void LoadImageIntoPictureBox()
         {
@@ -876,6 +1273,7 @@ namespace Monitoring_System
                     if (IsPointInsidePolygon(currentGPSPoint, pointsList))
                     {
                         workingAreaName = gridLineDataList[i].area;
+                        currentWorkingGridLineData = gridLineDataList[i];
                         break;
                     }
                 }
@@ -1246,11 +1644,11 @@ namespace Monitoring_System
         }
         private void btnMonitoring_Click(object sender, EventArgs e)
         {
-            /*
-            userControl11.Hide();
-            userControl21.Hide();
-            userControl31.Hide();
-            */
+            
+            userControl1.Hide();
+            userControl2.Hide();
+            userControl3.Hide();
+            
             btnMonitoring.BackColor = Color.Green;
             btnSetting1.BackColor = Color.LightSkyBlue;
             btnSetting2.BackColor = Color.LightSkyBlue;
@@ -1259,11 +1657,9 @@ namespace Monitoring_System
 
         private void btnSetting1_Click(object sender, EventArgs e)
         {
-            /*
-            userControl11.Show();
-            userControl21.Hide();
-            userControl31.Hide();
-            */
+            userControl1.Show();
+            userControl1.BringToFront();
+
             btnMonitoring.BackColor = Color.LightSkyBlue;
             btnSetting1.BackColor = Color.Green;
             btnSetting2.BackColor = Color.LightSkyBlue;
@@ -1272,11 +1668,9 @@ namespace Monitoring_System
 
         private void btnSetting2_Click(object sender, EventArgs e)
         {
-            /*
-            userControl11.Hide();
-            userControl21.Show();
-            userControl31.Hide();
-            */
+            userControl2.Show();
+            userControl2.BringToFront();
+
             btnMonitoring.BackColor = Color.LightSkyBlue;
             btnSetting1.BackColor = Color.LightSkyBlue;
             btnSetting2.BackColor = Color.Green;
@@ -1284,11 +1678,9 @@ namespace Monitoring_System
         }
         private void btnSetting3_Click(object sender, EventArgs e)
         {
-            /*
-            userControl11.Hide();
-            userControl21.Hide();
-            userControl31.Show();
-            */
+            userControl3.Show();
+            userControl3.BringToFront();
+
             btnMonitoring.BackColor = Color.LightSkyBlue;
             btnSetting1.BackColor = Color.LightSkyBlue;
             btnSetting2.BackColor = Color.LightSkyBlue;
@@ -1620,7 +2012,8 @@ namespace Monitoring_System
         private void btnAutolet_Click(object sender, EventArgs e)
         {
             isAutolet = true;
-            lblElevation.Text = Convert.ToString(autolet) + " [m]";
+            double trueElevation = GPS2zHeight - 1.5 - levelSensor;//GPS2(z) - T - Level Sensor data
+            lblElevation.Text = Convert.ToString(trueElevation) + " [m]";
             if (autolet > 0 && autolet < 25)
             {
                 verticalBar1.Value = (int)(4 * autolet); // scaling since vertical bar has 0-100 and autolet has 0-25 meters
@@ -1633,7 +2026,8 @@ namespace Monitoring_System
         private void btnLevelSensor_Click(object sender, EventArgs e)
         {
             isAutolet = false;
-            lblElevation.Text = Convert.ToString(levelSensor) + " [m]";
+            double trueElevation = GPS2zHeight - 1.5 - levelSensor;//GPS2(z) - T - Level Sensor data
+            lblElevation.Text = Convert.ToString(trueElevation) + " [m]";
             if (levelSensor > 0 && levelSensor < 10)
             {
                 verticalBar1.Value = (int)(10 * levelSensor); // scaling since vertical bar has 0-100 and autolet has 0-10 meters

@@ -30,6 +30,12 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSetting2U = new System.Windows.Forms.TextBox();
+            this.txtSetting2S = new System.Windows.Forms.TextBox();
+            this.txtSetting2T = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -45,12 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSetDimension = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSetting3SSInterval = new System.Windows.Forms.TextBox();
-            this.txtSetting3SSMin = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -85,9 +85,9 @@
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.txtSetting3SSInterval);
-            this.groupBox1.Controls.Add(this.txtSetting3SSMin);
+            this.groupBox1.Controls.Add(this.txtSetting2U);
+            this.groupBox1.Controls.Add(this.txtSetting2S);
+            this.groupBox1.Controls.Add(this.txtSetting2T);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label23);
@@ -107,6 +107,81 @@
             this.groupBox1.Size = new System.Drawing.Size(228, 671);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(70, 254);
+            this.textBox4.MinimumSize = new System.Drawing.Size(90, 30);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(90, 26);
+            this.textBox4.TabIndex = 509;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(70, 224);
+            this.textBox2.MinimumSize = new System.Drawing.Size(90, 30);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(90, 26);
+            this.textBox2.TabIndex = 508;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(70, 194);
+            this.textBox3.MinimumSize = new System.Drawing.Size(90, 30);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(90, 26);
+            this.textBox3.TabIndex = 507;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting2U
+            // 
+            this.txtSetting2U.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting2U.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting2U.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting2U.Location = new System.Drawing.Point(70, 164);
+            this.txtSetting2U.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting2U.Name = "txtSetting2U";
+            this.txtSetting2U.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting2U.TabIndex = 506;
+            this.txtSetting2U.Text = "2.000";
+            this.txtSetting2U.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting2S
+            // 
+            this.txtSetting2S.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting2S.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting2S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting2S.Location = new System.Drawing.Point(70, 104);
+            this.txtSetting2S.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting2S.Name = "txtSetting2S";
+            this.txtSetting2S.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting2S.TabIndex = 505;
+            this.txtSetting2S.Text = "3.500";
+            this.txtSetting2S.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting2T
+            // 
+            this.txtSetting2T.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting2T.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting2T.Location = new System.Drawing.Point(70, 134);
+            this.txtSetting2T.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting2T.Name = "txtSetting2T";
+            this.txtSetting2T.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting2T.TabIndex = 504;
+            this.txtSetting2T.Text = "1.500";
+            this.txtSetting2T.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label20
             // 
@@ -274,6 +349,7 @@
             this.btnSetDimension.TabIndex = 82;
             this.btnSetDimension.Text = "Set Dimension";
             this.btnSetDimension.UseVisualStyleBackColor = true;
+            this.btnSetDimension.Click += new System.EventHandler(this.btnSetDimension_Click);
             // 
             // panel1
             // 
@@ -284,81 +360,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1045, 671);
             this.panel1.TabIndex = 1;
-            // 
-            // txtSetting3SSInterval
-            // 
-            this.txtSetting3SSInterval.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSetting3SSInterval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtSetting3SSInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3SSInterval.Location = new System.Drawing.Point(70, 104);
-            this.txtSetting3SSInterval.MinimumSize = new System.Drawing.Size(90, 30);
-            this.txtSetting3SSInterval.Name = "txtSetting3SSInterval";
-            this.txtSetting3SSInterval.Size = new System.Drawing.Size(90, 30);
-            this.txtSetting3SSInterval.TabIndex = 505;
-            this.txtSetting3SSInterval.Text = "3.500";
-            this.txtSetting3SSInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSetting3SSMin
-            // 
-            this.txtSetting3SSMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSetting3SSMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSetting3SSMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetting3SSMin.Location = new System.Drawing.Point(70, 134);
-            this.txtSetting3SSMin.MinimumSize = new System.Drawing.Size(90, 30);
-            this.txtSetting3SSMin.Name = "txtSetting3SSMin";
-            this.txtSetting3SSMin.Size = new System.Drawing.Size(90, 30);
-            this.txtSetting3SSMin.TabIndex = 504;
-            this.txtSetting3SSMin.Text = "1.500";
-            this.txtSetting3SSMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(70, 164);
-            this.textBox1.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 30);
-            this.textBox1.TabIndex = 506;
-            this.textBox1.Text = "2.000";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(70, 224);
-            this.textBox2.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 30);
-            this.textBox2.TabIndex = 508;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(70, 194);
-            this.textBox3.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 30);
-            this.textBox3.TabIndex = 507;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(70, 254);
-            this.textBox4.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 30);
-            this.textBox4.TabIndex = 509;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UserControl2
             // 
@@ -393,11 +394,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSetDimension;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtSetting3SSInterval;
-        private System.Windows.Forms.TextBox txtSetting3SSMin;
+        private System.Windows.Forms.TextBox txtSetting2S;
+        private System.Windows.Forms.TextBox txtSetting2T;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSetting2U;
     }
 }

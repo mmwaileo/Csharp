@@ -30,6 +30,22 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSetting1P = new System.Windows.Forms.TextBox();
+            this.txtSetting1J = new System.Windows.Forms.TextBox();
+            this.txtSetting1O = new System.Windows.Forms.TextBox();
+            this.txtSetting1D = new System.Windows.Forms.TextBox();
+            this.txtSetting1N = new System.Windows.Forms.TextBox();
+            this.txtSetting1I = new System.Windows.Forms.TextBox();
+            this.txtSetting1M = new System.Windows.Forms.TextBox();
+            this.txtSetting1L = new System.Windows.Forms.TextBox();
+            this.txtSetting1H = new System.Windows.Forms.TextBox();
+            this.txtSetting1K = new System.Windows.Forms.TextBox();
+            this.txtSetting1C = new System.Windows.Forms.TextBox();
+            this.txtSetting1G = new System.Windows.Forms.TextBox();
+            this.txtSetting1B = new System.Windows.Forms.TextBox();
+            this.txtSetting1F = new System.Windows.Forms.TextBox();
+            this.txtSetting1A = new System.Windows.Forms.TextBox();
+            this.txtSetting1E = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -65,6 +81,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSetDimension = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSetting1AFTSTB = new System.Windows.Forms.TextBox();
+            this.txtSetting1AFTPort = new System.Windows.Forms.TextBox();
+            this.txtSetting1R = new System.Windows.Forms.TextBox();
+            this.txtSetting1Q = new System.Windows.Forms.TextBox();
+            this.txtSetting1FWSTB = new System.Windows.Forms.TextBox();
+            this.txtSetting1FWPort = new System.Windows.Forms.TextBox();
             this.btnSetDraft = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -81,28 +103,6 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -143,22 +143,22 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox13);
-            this.groupBox1.Controls.Add(this.textBox17);
-            this.groupBox1.Controls.Add(this.textBox14);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.textBox15);
-            this.groupBox1.Controls.Add(this.textBox18);
-            this.groupBox1.Controls.Add(this.textBox16);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox19);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox20);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox21);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox22);
+            this.groupBox1.Controls.Add(this.txtSetting1P);
+            this.groupBox1.Controls.Add(this.txtSetting1J);
+            this.groupBox1.Controls.Add(this.txtSetting1O);
+            this.groupBox1.Controls.Add(this.txtSetting1D);
+            this.groupBox1.Controls.Add(this.txtSetting1N);
+            this.groupBox1.Controls.Add(this.txtSetting1I);
+            this.groupBox1.Controls.Add(this.txtSetting1M);
+            this.groupBox1.Controls.Add(this.txtSetting1L);
+            this.groupBox1.Controls.Add(this.txtSetting1H);
+            this.groupBox1.Controls.Add(this.txtSetting1K);
+            this.groupBox1.Controls.Add(this.txtSetting1C);
+            this.groupBox1.Controls.Add(this.txtSetting1G);
+            this.groupBox1.Controls.Add(this.txtSetting1B);
+            this.groupBox1.Controls.Add(this.txtSetting1F);
+            this.groupBox1.Controls.Add(this.txtSetting1A);
+            this.groupBox1.Controls.Add(this.txtSetting1E);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label29);
@@ -199,6 +199,214 @@
             this.groupBox1.Size = new System.Drawing.Size(231, 671);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // txtSetting1P
+            // 
+            this.txtSetting1P.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1P.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1P.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1P.Location = new System.Drawing.Point(74, 546);
+            this.txtSetting1P.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1P.Name = "txtSetting1P";
+            this.txtSetting1P.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1P.TabIndex = 522;
+            this.txtSetting1P.Text = "10.300";
+            this.txtSetting1P.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1J
+            // 
+            this.txtSetting1J.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1J.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1J.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1J.Location = new System.Drawing.Point(74, 366);
+            this.txtSetting1J.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1J.Name = "txtSetting1J";
+            this.txtSetting1J.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1J.TabIndex = 528;
+            this.txtSetting1J.Text = "2.650";
+            this.txtSetting1J.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1O
+            // 
+            this.txtSetting1O.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1O.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1O.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1O.Location = new System.Drawing.Point(74, 516);
+            this.txtSetting1O.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1O.Name = "txtSetting1O";
+            this.txtSetting1O.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1O.TabIndex = 520;
+            this.txtSetting1O.Text = "3.500";
+            this.txtSetting1O.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1D
+            // 
+            this.txtSetting1D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1D.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1D.Location = new System.Drawing.Point(74, 186);
+            this.txtSetting1D.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1D.Name = "txtSetting1D";
+            this.txtSetting1D.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1D.TabIndex = 519;
+            this.txtSetting1D.Text = "25.000";
+            this.txtSetting1D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1N
+            // 
+            this.txtSetting1N.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1N.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1N.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1N.Location = new System.Drawing.Point(74, 486);
+            this.txtSetting1N.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1N.Name = "txtSetting1N";
+            this.txtSetting1N.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1N.TabIndex = 523;
+            this.txtSetting1N.Text = "2.497";
+            this.txtSetting1N.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1I
+            // 
+            this.txtSetting1I.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1I.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1I.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1I.Location = new System.Drawing.Point(74, 336);
+            this.txtSetting1I.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1I.Name = "txtSetting1I";
+            this.txtSetting1I.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1I.TabIndex = 526;
+            this.txtSetting1I.Text = "13.500";
+            this.txtSetting1I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1M
+            // 
+            this.txtSetting1M.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1M.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1M.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1M.Location = new System.Drawing.Point(74, 456);
+            this.txtSetting1M.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1M.Name = "txtSetting1M";
+            this.txtSetting1M.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1M.TabIndex = 521;
+            this.txtSetting1M.Text = "1.730";
+            this.txtSetting1M.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1L
+            // 
+            this.txtSetting1L.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1L.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1L.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1L.Location = new System.Drawing.Point(74, 426);
+            this.txtSetting1L.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1L.Name = "txtSetting1L";
+            this.txtSetting1L.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1L.TabIndex = 517;
+            this.txtSetting1L.Text = "102.900";
+            this.txtSetting1L.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1H
+            // 
+            this.txtSetting1H.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1H.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1H.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1H.Location = new System.Drawing.Point(74, 306);
+            this.txtSetting1H.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1H.Name = "txtSetting1H";
+            this.txtSetting1H.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1H.TabIndex = 529;
+            this.txtSetting1H.Text = "7.500";
+            this.txtSetting1H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1K
+            // 
+            this.txtSetting1K.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1K.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1K.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1K.Location = new System.Drawing.Point(74, 396);
+            this.txtSetting1K.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1K.Name = "txtSetting1K";
+            this.txtSetting1K.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1K.TabIndex = 516;
+            this.txtSetting1K.Text = "2.000";
+            this.txtSetting1K.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1C
+            // 
+            this.txtSetting1C.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1C.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1C.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1C.Location = new System.Drawing.Point(74, 156);
+            this.txtSetting1C.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1C.Name = "txtSetting1C";
+            this.txtSetting1C.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1C.TabIndex = 518;
+            this.txtSetting1C.Text = "49.989";
+            this.txtSetting1C.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1G
+            // 
+            this.txtSetting1G.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1G.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1G.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1G.Location = new System.Drawing.Point(74, 276);
+            this.txtSetting1G.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1G.Name = "txtSetting1G";
+            this.txtSetting1G.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1G.TabIndex = 527;
+            this.txtSetting1G.Text = "3.000";
+            this.txtSetting1G.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1B
+            // 
+            this.txtSetting1B.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1B.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1B.Location = new System.Drawing.Point(74, 126);
+            this.txtSetting1B.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1B.Name = "txtSetting1B";
+            this.txtSetting1B.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1B.TabIndex = 519;
+            this.txtSetting1B.Text = "60.408";
+            this.txtSetting1B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1F
+            // 
+            this.txtSetting1F.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1F.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1F.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1F.Location = new System.Drawing.Point(74, 246);
+            this.txtSetting1F.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1F.Name = "txtSetting1F";
+            this.txtSetting1F.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1F.TabIndex = 525;
+            this.txtSetting1F.Text = "3.395";
+            this.txtSetting1F.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1A
+            // 
+            this.txtSetting1A.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1A.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1A.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1A.Location = new System.Drawing.Point(74, 96);
+            this.txtSetting1A.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1A.Name = "txtSetting1A";
+            this.txtSetting1A.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1A.TabIndex = 518;
+            this.txtSetting1A.Text = "110.397";
+            this.txtSetting1A.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1E
+            // 
+            this.txtSetting1E.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSetting1E.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1E.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1E.Location = new System.Drawing.Point(74, 216);
+            this.txtSetting1E.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1E.Name = "txtSetting1E";
+            this.txtSetting1E.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1E.TabIndex = 524;
+            this.txtSetting1E.Text = "12.500";
+            this.txtSetting1E.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
@@ -606,15 +814,16 @@
             this.btnSetDimension.TabIndex = 197;
             this.btnSetDimension.Text = "Set Dimension";
             this.btnSetDimension.UseVisualStyleBackColor = true;
+            this.btnSetDimension.Click += new System.EventHandler(this.btnSetDimension_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtSetting1AFTSTB);
+            this.groupBox2.Controls.Add(this.txtSetting1AFTPort);
+            this.groupBox2.Controls.Add(this.txtSetting1R);
+            this.groupBox2.Controls.Add(this.txtSetting1Q);
+            this.groupBox2.Controls.Add(this.txtSetting1FWSTB);
+            this.groupBox2.Controls.Add(this.txtSetting1FWPort);
             this.groupBox2.Controls.Add(this.btnSetDraft);
             this.groupBox2.Controls.Add(this.label57);
             this.groupBox2.Controls.Add(this.label59);
@@ -636,7 +845,78 @@
             this.groupBox2.Size = new System.Drawing.Size(212, 671);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // txtSetting1AFTSTB
+            // 
+            this.txtSetting1AFTSTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1AFTSTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1AFTSTB.Location = new System.Drawing.Point(102, 324);
+            this.txtSetting1AFTSTB.MinimumSize = new System.Drawing.Size(48, 30);
+            this.txtSetting1AFTSTB.Name = "txtSetting1AFTSTB";
+            this.txtSetting1AFTSTB.Size = new System.Drawing.Size(48, 23);
+            this.txtSetting1AFTSTB.TabIndex = 515;
+            this.txtSetting1AFTSTB.Text = "1.500";
+            this.txtSetting1AFTSTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1AFTPort
+            // 
+            this.txtSetting1AFTPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1AFTPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1AFTPort.Location = new System.Drawing.Point(102, 294);
+            this.txtSetting1AFTPort.MinimumSize = new System.Drawing.Size(48, 30);
+            this.txtSetting1AFTPort.Name = "txtSetting1AFTPort";
+            this.txtSetting1AFTPort.Size = new System.Drawing.Size(48, 23);
+            this.txtSetting1AFTPort.TabIndex = 514;
+            this.txtSetting1AFTPort.Text = "1.500";
+            this.txtSetting1AFTPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1R
+            // 
+            this.txtSetting1R.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1R.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1R.Location = new System.Drawing.Point(60, 124);
+            this.txtSetting1R.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1R.Name = "txtSetting1R";
+            this.txtSetting1R.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1R.TabIndex = 513;
+            this.txtSetting1R.Text = "5.538";
+            this.txtSetting1R.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1Q
+            // 
+            this.txtSetting1Q.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1Q.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1Q.Location = new System.Drawing.Point(60, 94);
+            this.txtSetting1Q.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting1Q.Name = "txtSetting1Q";
+            this.txtSetting1Q.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting1Q.TabIndex = 512;
+            this.txtSetting1Q.Text = "1.500";
+            this.txtSetting1Q.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1FWSTB
+            // 
+            this.txtSetting1FWSTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSetting1FWSTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1FWSTB.Location = new System.Drawing.Point(102, 264);
+            this.txtSetting1FWSTB.MinimumSize = new System.Drawing.Size(48, 30);
+            this.txtSetting1FWSTB.Name = "txtSetting1FWSTB";
+            this.txtSetting1FWSTB.Size = new System.Drawing.Size(48, 23);
+            this.txtSetting1FWSTB.TabIndex = 511;
+            this.txtSetting1FWSTB.Text = "1.500";
+            this.txtSetting1FWSTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSetting1FWPort
+            // 
+            this.txtSetting1FWPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSetting1FWPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetting1FWPort.Location = new System.Drawing.Point(102, 234);
+            this.txtSetting1FWPort.MinimumSize = new System.Drawing.Size(48, 30);
+            this.txtSetting1FWPort.Name = "txtSetting1FWPort";
+            this.txtSetting1FWPort.Size = new System.Drawing.Size(48, 23);
+            this.txtSetting1FWPort.TabIndex = 510;
+            this.txtSetting1FWPort.Text = "1.500";
+            this.txtSetting1FWPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSetDraft
             // 
@@ -647,6 +927,7 @@
             this.btnSetDraft.TabIndex = 236;
             this.btnSetDraft.Text = "Set Draft";
             this.btnSetDraft.UseVisualStyleBackColor = true;
+            this.btnSetDraft.Click += new System.EventHandler(this.btnSetDraft_Click);
             // 
             // label57
             // 
@@ -828,286 +1109,6 @@
             this.panel1.Size = new System.Drawing.Size(855, 671);
             this.panel1.TabIndex = 2;
             // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(102, 264);
-            this.textBox4.MinimumSize = new System.Drawing.Size(48, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(48, 30);
-            this.textBox4.TabIndex = 511;
-            this.textBox4.Text = "1.500";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(102, 234);
-            this.textBox2.MinimumSize = new System.Drawing.Size(48, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(48, 30);
-            this.textBox2.TabIndex = 510;
-            this.textBox2.Text = "1.500";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(60, 124);
-            this.textBox1.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 30);
-            this.textBox1.TabIndex = 513;
-            this.textBox1.Text = "5.538";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(60, 94);
-            this.textBox3.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 30);
-            this.textBox3.TabIndex = 512;
-            this.textBox3.Text = "1.500";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(102, 324);
-            this.textBox5.MinimumSize = new System.Drawing.Size(48, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(48, 30);
-            this.textBox5.TabIndex = 515;
-            this.textBox5.Text = "1.500";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(102, 294);
-            this.textBox6.MinimumSize = new System.Drawing.Size(48, 30);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(48, 30);
-            this.textBox6.TabIndex = 514;
-            this.textBox6.Text = "1.500";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(74, 426);
-            this.textBox7.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(90, 30);
-            this.textBox7.TabIndex = 517;
-            this.textBox7.Text = "102.900";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(74, 396);
-            this.textBox8.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(90, 30);
-            this.textBox8.TabIndex = 516;
-            this.textBox8.Text = "2.000";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(74, 126);
-            this.textBox9.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(90, 30);
-            this.textBox9.TabIndex = 519;
-            this.textBox9.Text = "60.408";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(74, 96);
-            this.textBox10.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(90, 30);
-            this.textBox10.TabIndex = 518;
-            this.textBox10.Text = "110.397";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(74, 186);
-            this.textBox11.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(90, 30);
-            this.textBox11.TabIndex = 519;
-            this.textBox11.Text = "25.000";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(74, 156);
-            this.textBox12.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(90, 30);
-            this.textBox12.TabIndex = 518;
-            this.textBox12.Text = "49.989";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(74, 546);
-            this.textBox13.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(90, 30);
-            this.textBox13.TabIndex = 522;
-            this.textBox13.Text = "10.300";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(74, 516);
-            this.textBox14.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(90, 30);
-            this.textBox14.TabIndex = 520;
-            this.textBox14.Text = "3.500";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(74, 486);
-            this.textBox15.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(90, 30);
-            this.textBox15.TabIndex = 523;
-            this.textBox15.Text = "2.497";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(74, 456);
-            this.textBox16.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(90, 30);
-            this.textBox16.TabIndex = 521;
-            this.textBox16.Text = "1.730";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(74, 366);
-            this.textBox17.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(90, 30);
-            this.textBox17.TabIndex = 528;
-            this.textBox17.Text = "2.650";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(74, 336);
-            this.textBox18.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(90, 30);
-            this.textBox18.TabIndex = 526;
-            this.textBox18.Text = "13.500";
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(74, 306);
-            this.textBox19.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(90, 30);
-            this.textBox19.TabIndex = 529;
-            this.textBox19.Text = "7.500";
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(74, 276);
-            this.textBox20.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(90, 30);
-            this.textBox20.TabIndex = 527;
-            this.textBox20.Text = "3.000";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(74, 246);
-            this.textBox21.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(90, 30);
-            this.textBox21.TabIndex = 525;
-            this.textBox21.Text = "3.395";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(74, 216);
-            this.textBox22.MinimumSize = new System.Drawing.Size(90, 30);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(90, 30);
-            this.textBox22.TabIndex = 524;
-            this.textBox22.Text = "12.500";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1179,27 +1180,27 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtSetting1AFTSTB;
+        private System.Windows.Forms.TextBox txtSetting1AFTPort;
+        private System.Windows.Forms.TextBox txtSetting1R;
+        private System.Windows.Forms.TextBox txtSetting1Q;
+        private System.Windows.Forms.TextBox txtSetting1FWSTB;
+        private System.Windows.Forms.TextBox txtSetting1FWPort;
+        private System.Windows.Forms.TextBox txtSetting1J;
+        private System.Windows.Forms.TextBox txtSetting1D;
+        private System.Windows.Forms.TextBox txtSetting1I;
+        private System.Windows.Forms.TextBox txtSetting1H;
+        private System.Windows.Forms.TextBox txtSetting1C;
+        private System.Windows.Forms.TextBox txtSetting1G;
+        private System.Windows.Forms.TextBox txtSetting1B;
+        private System.Windows.Forms.TextBox txtSetting1F;
+        private System.Windows.Forms.TextBox txtSetting1A;
+        private System.Windows.Forms.TextBox txtSetting1E;
+        private System.Windows.Forms.TextBox txtSetting1P;
+        private System.Windows.Forms.TextBox txtSetting1O;
+        private System.Windows.Forms.TextBox txtSetting1N;
+        private System.Windows.Forms.TextBox txtSetting1M;
+        private System.Windows.Forms.TextBox txtSetting1L;
+        private System.Windows.Forms.TextBox txtSetting1K;
     }
 }

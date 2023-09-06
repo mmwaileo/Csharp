@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoring System.exe" size="170952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoring System.exe" size="186824">
       <assemblyIdentity name="Monitoring System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GCPU5pvJEL4hH8ZDlK/i89j165NlHnAaKQ+rkMhYZxM=</dsig:DigestValue>
+        <dsig:DigestValue>2etCRYfWmy7Eg5w2yfKr0gjCAysFvxYUegOLY8RK8Ao=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

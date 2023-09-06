@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series61 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series62 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series63 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series64 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnComplete = new System.Windows.Forms.Button();
             this.lblRecording = new System.Windows.Forms.Label();
@@ -119,16 +115,10 @@
             this.btnShowObject = new System.Windows.Forms.Button();
             this.btnShowGrid = new System.Windows.Forms.Button();
             this.txtBearing = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gaugeControl3 = new Monitoring_System.GaugeControl();
-            this.gaugeControl2 = new Monitoring_System.GaugeControl();
-            this.gaugeControl1 = new Monitoring_System.GaugeControl();
-            this.verticalBarWithoutTolerance2 = new Monitoring_System.VerticalBarWithoutTolerance();
-            this.verticalBarWithoutTolerance1 = new Monitoring_System.VerticalBarWithoutTolerance();
-            this.verticalBar1 = new Monitoring_System.VerticalBar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSS1Min = new System.Windows.Forms.Label();
+            this.lblSS1Max = new System.Windows.Forms.Label();
+            this.lblSS2Max = new System.Windows.Forms.Label();
+            this.lblSS2Min = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -137,8 +127,15 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblTrimOnPB = new System.Windows.Forms.Label();
+            this.lblTideReading = new System.Windows.Forms.Label();
+            this.gaugeControl3 = new Monitoring_System.GaugeControl();
+            this.gaugeControl2 = new Monitoring_System.GaugeControl();
+            this.gaugeControl1 = new Monitoring_System.GaugeControl();
+            this.verticalBarWithoutTolerance2 = new Monitoring_System.VerticalBarWithoutTolerance();
+            this.verticalBarWithoutTolerance1 = new Monitoring_System.VerticalBarWithoutTolerance();
+            this.verticalBar1 = new Monitoring_System.VerticalBar();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -835,10 +832,10 @@
             // 
             this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(1257, 332);
+            this.label52.Location = new System.Drawing.Point(1283, 332);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(139, 27);
+            this.label52.Size = new System.Drawing.Size(125, 27);
             this.label52.TabIndex = 100;
             this.label52.Text = "Ladder Stroke Sensor";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -927,7 +924,7 @@
             // 
             this.lblP3Gauge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP3Gauge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblP3Gauge.Location = new System.Drawing.Point(1170, 559);
+            this.lblP3Gauge.Location = new System.Drawing.Point(1172, 559);
             this.lblP3Gauge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP3Gauge.Name = "lblP3Gauge";
             this.lblP3Gauge.Size = new System.Drawing.Size(62, 21);
@@ -951,7 +948,7 @@
             // 
             this.lblP1Gauge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP1Gauge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblP1Gauge.Location = new System.Drawing.Point(988, 559);
+            this.lblP1Gauge.Location = new System.Drawing.Point(990, 559);
             this.lblP1Gauge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP1Gauge.Name = "lblP1Gauge";
             this.lblP1Gauge.Size = new System.Drawing.Size(62, 21);
@@ -1147,32 +1144,12 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea16.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chart1.Legends.Add(legend16);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(733, 635);
             this.chart1.Name = "chart1";
-            series61.ChartArea = "ChartArea1";
-            series61.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series61.Legend = "Legend1";
-            series61.Name = "P1";
-            series62.ChartArea = "ChartArea1";
-            series62.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series62.Legend = "Legend1";
-            series62.Name = "P2";
-            series63.ChartArea = "ChartArea1";
-            series63.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series63.Legend = "Legend1";
-            series63.Name = "P3";
-            series64.ChartArea = "ChartArea1";
-            series64.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series64.Legend = "Legend1";
-            series64.Name = "D Level";
-            this.chart1.Series.Add(series61);
-            this.chart1.Series.Add(series62);
-            this.chart1.Series.Add(series63);
-            this.chart1.Series.Add(series64);
             this.chart1.Size = new System.Drawing.Size(700, 273);
             this.chart1.TabIndex = 104;
             this.chart1.Text = "chart1";
@@ -1218,8 +1195,10 @@
             // txtBearing
             // 
             this.txtBearing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtBearing.BackColor = System.Drawing.Color.LightSkyBlue;
             this.txtBearing.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBearing.Location = new System.Drawing.Point(659, 482);
+            this.txtBearing.MinimumSize = new System.Drawing.Size(4, 35);
             this.txtBearing.Name = "txtBearing";
             this.txtBearing.Size = new System.Drawing.Size(52, 23);
             this.txtBearing.TabIndex = 113;
@@ -1227,121 +1206,49 @@
             this.txtBearing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBearing.TextChanged += new System.EventHandler(this.txtBearing_TextChanged);
             // 
-            // label1
+            // lblSS1Min
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(1230, 503);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
-            this.label1.TabIndex = 114;
-            this.label1.Text = "0.00m";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSS1Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSS1Min.Location = new System.Drawing.Point(1230, 503);
+            this.lblSS1Min.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSS1Min.Name = "lblSS1Min";
+            this.lblSS1Min.Size = new System.Drawing.Size(49, 20);
+            this.lblSS1Min.TabIndex = 114;
+            this.lblSS1Min.Text = "0mm";
+            this.lblSS1Min.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gaugeControl3
+            // lblSS1Max
             // 
-            this.gaugeControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gaugeControl3.Location = new System.Drawing.Point(1163, 478);
-            this.gaugeControl3.MaximumValue = 100;
-            this.gaugeControl3.MinimumValue = 0;
-            this.gaugeControl3.Name = "gaugeControl3";
-            this.gaugeControl3.Size = new System.Drawing.Size(74, 79);
-            this.gaugeControl3.TabIndex = 110;
-            this.gaugeControl3.Text = "gaugeControl3";
-            this.gaugeControl3.Value = 0;
+            this.lblSS1Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSS1Max.Location = new System.Drawing.Point(1229, 377);
+            this.lblSS1Max.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSS1Max.Name = "lblSS1Max";
+            this.lblSS1Max.Size = new System.Drawing.Size(49, 20);
+            this.lblSS1Max.TabIndex = 115;
+            this.lblSS1Max.Text = "6000mm";
+            this.lblSS1Max.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gaugeControl2
+            // lblSS2Max
             // 
-            this.gaugeControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gaugeControl2.Location = new System.Drawing.Point(1070, 478);
-            this.gaugeControl2.MaximumValue = 100;
-            this.gaugeControl2.MinimumValue = 0;
-            this.gaugeControl2.Name = "gaugeControl2";
-            this.gaugeControl2.Size = new System.Drawing.Size(74, 79);
-            this.gaugeControl2.TabIndex = 109;
-            this.gaugeControl2.Text = "gaugeControl2";
-            this.gaugeControl2.Value = 0;
+            this.lblSS2Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSS2Max.Location = new System.Drawing.Point(1326, 377);
+            this.lblSS2Max.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSS2Max.Name = "lblSS2Max";
+            this.lblSS2Max.Size = new System.Drawing.Size(49, 20);
+            this.lblSS2Max.TabIndex = 117;
+            this.lblSS2Max.Text = "6000mm";
+            this.lblSS2Max.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gaugeControl1
+            // lblSS2Min
             // 
-            this.gaugeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gaugeControl1.Location = new System.Drawing.Point(984, 478);
-            this.gaugeControl1.MaximumValue = 100;
-            this.gaugeControl1.MinimumValue = 0;
-            this.gaugeControl1.Name = "gaugeControl1";
-            this.gaugeControl1.Size = new System.Drawing.Size(74, 79);
-            this.gaugeControl1.TabIndex = 108;
-            this.gaugeControl1.Text = "gaugeControl1";
-            this.gaugeControl1.Value = 0;
-            // 
-            // verticalBarWithoutTolerance2
-            // 
-            this.verticalBarWithoutTolerance2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.verticalBarWithoutTolerance2.Location = new System.Drawing.Point(1367, 386);
-            this.verticalBarWithoutTolerance2.MaximumValue = 100;
-            this.verticalBarWithoutTolerance2.MinimumValue = 0;
-            this.verticalBarWithoutTolerance2.Name = "verticalBarWithoutTolerance2";
-            this.verticalBarWithoutTolerance2.Size = new System.Drawing.Size(51, 131);
-            this.verticalBarWithoutTolerance2.TabIndex = 107;
-            this.verticalBarWithoutTolerance2.Text = "verticalBarWithoutTolerance2";
-            this.verticalBarWithoutTolerance2.Value = 0;
-            // 
-            // verticalBarWithoutTolerance1
-            // 
-            this.verticalBarWithoutTolerance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.verticalBarWithoutTolerance1.Location = new System.Drawing.Point(1271, 386);
-            this.verticalBarWithoutTolerance1.MaximumValue = 100;
-            this.verticalBarWithoutTolerance1.MinimumValue = 0;
-            this.verticalBarWithoutTolerance1.Name = "verticalBarWithoutTolerance1";
-            this.verticalBarWithoutTolerance1.Size = new System.Drawing.Size(51, 131);
-            this.verticalBarWithoutTolerance1.TabIndex = 106;
-            this.verticalBarWithoutTolerance1.Text = "verticalBarWithoutTolerance1";
-            this.verticalBarWithoutTolerance1.Value = 0;
-            // 
-            // verticalBar1
-            // 
-            this.verticalBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.verticalBar1.Location = new System.Drawing.Point(755, 340);
-            this.verticalBar1.MaximumValue = 100;
-            this.verticalBar1.MinimumValue = 0;
-            this.verticalBar1.Name = "verticalBar1";
-            this.verticalBar1.Size = new System.Drawing.Size(64, 252);
-            this.verticalBar1.TabIndex = 105;
-            this.verticalBar1.Text = "verticalBar1";
-            this.verticalBar1.Value = 0;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Location = new System.Drawing.Point(1230, 377);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
-            this.label2.TabIndex = 115;
-            this.label2.Text = "0.00m";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Location = new System.Drawing.Point(1327, 377);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 117;
-            this.label4.Text = "0.00m";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Location = new System.Drawing.Point(1327, 503);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 20);
-            this.label5.TabIndex = 116;
-            this.label5.Text = "0.00m";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSS2Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSS2Min.Location = new System.Drawing.Point(1327, 503);
+            this.lblSS2Min.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSS2Min.Name = "lblSS2Min";
+            this.lblSS2Min.Size = new System.Drawing.Size(49, 20);
+            this.lblSS2Min.TabIndex = 116;
+            this.lblSS2Min.Text = "0mm";
+            this.lblSS2Min.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -1431,35 +1338,117 @@
             this.label17.Text = "0";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // lblTrimOnPB
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.Location = new System.Drawing.Point(782, 155);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 20);
-            this.label18.TabIndex = 126;
-            this.label18.Text = "0.00m";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTrimOnPB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTrimOnPB.Location = new System.Drawing.Point(782, 155);
+            this.lblTrimOnPB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTrimOnPB.Name = "lblTrimOnPB";
+            this.lblTrimOnPB.Size = new System.Drawing.Size(51, 20);
+            this.lblTrimOnPB.TabIndex = 126;
+            this.lblTrimOnPB.Text = "0.00deg";
+            this.lblTrimOnPB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // lblTideReading
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.Location = new System.Drawing.Point(1318, 155);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 20);
-            this.label19.TabIndex = 127;
-            this.label19.Text = "0.00m";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTideReading.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTideReading.Location = new System.Drawing.Point(1318, 155);
+            this.lblTideReading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTideReading.Name = "lblTideReading";
+            this.lblTideReading.Size = new System.Drawing.Size(43, 20);
+            this.lblTideReading.TabIndex = 127;
+            this.lblTideReading.Text = "0.00m";
+            this.lblTideReading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gaugeControl3
+            // 
+            this.gaugeControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gaugeControl3.Location = new System.Drawing.Point(1163, 478);
+            this.gaugeControl3.MaximumValue = 100;
+            this.gaugeControl3.MinimumValue = 0;
+            this.gaugeControl3.Name = "gaugeControl3";
+            this.gaugeControl3.Size = new System.Drawing.Size(74, 79);
+            this.gaugeControl3.TabIndex = 110;
+            this.gaugeControl3.Text = "gaugeControl3";
+            this.gaugeControl3.Value = 0;
+            // 
+            // gaugeControl2
+            // 
+            this.gaugeControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gaugeControl2.Location = new System.Drawing.Point(1070, 478);
+            this.gaugeControl2.MaximumValue = 100;
+            this.gaugeControl2.MinimumValue = 0;
+            this.gaugeControl2.Name = "gaugeControl2";
+            this.gaugeControl2.Size = new System.Drawing.Size(74, 79);
+            this.gaugeControl2.TabIndex = 109;
+            this.gaugeControl2.Text = "gaugeControl2";
+            this.gaugeControl2.Value = 0;
+            // 
+            // gaugeControl1
+            // 
+            this.gaugeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gaugeControl1.Location = new System.Drawing.Point(984, 478);
+            this.gaugeControl1.MaximumValue = 100;
+            this.gaugeControl1.MinimumValue = 0;
+            this.gaugeControl1.Name = "gaugeControl1";
+            this.gaugeControl1.Size = new System.Drawing.Size(74, 79);
+            this.gaugeControl1.TabIndex = 108;
+            this.gaugeControl1.Text = "gaugeControl1";
+            this.gaugeControl1.Value = 0;
+            // 
+            // verticalBarWithoutTolerance2
+            // 
+            this.verticalBarWithoutTolerance2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.verticalBarWithoutTolerance2.Location = new System.Drawing.Point(1367, 386);
+            this.verticalBarWithoutTolerance2.MaximumValue = 100;
+            this.verticalBarWithoutTolerance2.MinimumValue = 0;
+            this.verticalBarWithoutTolerance2.Name = "verticalBarWithoutTolerance2";
+            this.verticalBarWithoutTolerance2.Size = new System.Drawing.Size(51, 131);
+            this.verticalBarWithoutTolerance2.TabIndex = 107;
+            this.verticalBarWithoutTolerance2.Text = "verticalBarWithoutTolerance2";
+            this.verticalBarWithoutTolerance2.Value = 0;
+            // 
+            // verticalBarWithoutTolerance1
+            // 
+            this.verticalBarWithoutTolerance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.verticalBarWithoutTolerance1.Location = new System.Drawing.Point(1271, 386);
+            this.verticalBarWithoutTolerance1.MaximumValue = 100;
+            this.verticalBarWithoutTolerance1.MinimumValue = 0;
+            this.verticalBarWithoutTolerance1.Name = "verticalBarWithoutTolerance1";
+            this.verticalBarWithoutTolerance1.Size = new System.Drawing.Size(51, 131);
+            this.verticalBarWithoutTolerance1.TabIndex = 106;
+            this.verticalBarWithoutTolerance1.Text = "verticalBarWithoutTolerance1";
+            this.verticalBarWithoutTolerance1.Value = 0;
+            // 
+            // verticalBar1
+            // 
+            this.verticalBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.verticalBar1.Location = new System.Drawing.Point(755, 340);
+            this.verticalBar1.MaximumValue = 100;
+            this.verticalBar1.MinimumValue = 0;
+            this.verticalBar1.Name = "verticalBar1";
+            this.verticalBar1.Size = new System.Drawing.Size(64, 252);
+            this.verticalBar1.TabIndex = 105;
+            this.verticalBar1.Text = "verticalBar1";
+            this.verticalBar1.Value = 0;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(1, 943);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(16, 13);
+            this.lblStatus.TabIndex = 128;
+            this.lblStatus.Text = "...";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 965);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblTideReading);
+            this.Controls.Add(this.lblTrimOnPB);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label13);
@@ -1468,10 +1457,10 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSS2Max);
+            this.Controls.Add(this.lblSS2Min);
+            this.Controls.Add(this.lblSS1Max);
+            this.Controls.Add(this.lblSS1Min);
             this.Controls.Add(this.txtBearing);
             this.Controls.Add(this.btnShowGrid);
             this.Controls.Add(this.btnShowObject);
@@ -1537,7 +1526,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Monitoring System";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1646,10 +1635,10 @@
         private System.Windows.Forms.Button btnShowObject;
         private System.Windows.Forms.Button btnShowGrid;
         private System.Windows.Forms.TextBox txtBearing;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSS1Min;
+        private System.Windows.Forms.Label lblSS1Max;
+        private System.Windows.Forms.Label lblSS2Max;
+        private System.Windows.Forms.Label lblSS2Min;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -1658,8 +1647,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblTrimOnPB;
+        private System.Windows.Forms.Label lblTideReading;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 
