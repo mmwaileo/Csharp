@@ -12,7 +12,9 @@ namespace Monitoring_System
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
         [STAThread]
+        
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -29,28 +31,14 @@ namespace Monitoring_System
             Thread.Sleep(1000);
             /*
             Form1 mainForm = new Form1();
-            if (mainForm.IsGPS1Up())
-            {
-                mainForm.boolIsGPS1Up = true;
-            }
-            else
-            {
-                mainForm.boolIsGPS1Up = false;
-            }
-
-            if (mainForm.IsGPS2Up())
-            {
-                mainForm.boolIsGPS2Up = true;
-            }
-            else
-            {
-                mainForm.boolIsGPS2Up = false;
-            }
-            */
+            mainForm.IsGPS1Up();
+            mainForm.IsGPS2Up();
+            */          
             splash.Invoke(new Action(() => splash.Close()));
             splashThread.Join();
 
             Application.Run(new Form1());
+
         }
     }
 }

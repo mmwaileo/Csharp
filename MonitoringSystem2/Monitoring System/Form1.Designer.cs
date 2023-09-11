@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnComplete = new System.Windows.Forms.Button();
             this.lblRecording = new System.Windows.Forms.Label();
@@ -119,23 +119,23 @@
             this.lblSS1Max = new System.Windows.Forms.Label();
             this.lblSS2Max = new System.Windows.Forms.Label();
             this.lblSS2Min = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblElevationMax = new System.Windows.Forms.Label();
+            this.lblElevationMin = new System.Windows.Forms.Label();
+            this.lblPressureMin1 = new System.Windows.Forms.Label();
+            this.lblPressureMax1 = new System.Windows.Forms.Label();
+            this.lblPressureMax2 = new System.Windows.Forms.Label();
+            this.lblPressureMin2 = new System.Windows.Forms.Label();
+            this.lblPressureMax3 = new System.Windows.Forms.Label();
+            this.lblPressureMin3 = new System.Windows.Forms.Label();
             this.lblTrimOnPB = new System.Windows.Forms.Label();
             this.lblTideReading = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.gaugeControl3 = new Monitoring_System.GaugeControl();
             this.gaugeControl2 = new Monitoring_System.GaugeControl();
             this.gaugeControl1 = new Monitoring_System.GaugeControl();
             this.verticalBarWithoutTolerance2 = new Monitoring_System.VerticalBarWithoutTolerance();
             this.verticalBarWithoutTolerance1 = new Monitoring_System.VerticalBarWithoutTolerance();
             this.verticalBar1 = new Monitoring_System.VerticalBar();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -165,7 +165,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1443, 65);
+            this.panel1.Size = new System.Drawing.Size(1443, 66);
             this.panel1.TabIndex = 0;
             // 
             // btnComplete
@@ -367,7 +367,7 @@
             this.btnDropPin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDropPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDropPin.ForeColor = System.Drawing.Color.Black;
-            this.btnDropPin.Location = new System.Drawing.Point(474, 476);
+            this.btnDropPin.Location = new System.Drawing.Point(474, 417);
             this.btnDropPin.Name = "btnDropPin";
             this.btnDropPin.Size = new System.Drawing.Size(91, 35);
             this.btnDropPin.TabIndex = 19;
@@ -386,7 +386,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(565, 476);
+            this.btnClear.Location = new System.Drawing.Point(565, 417);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(91, 35);
             this.btnClear.TabIndex = 21;
@@ -404,7 +404,7 @@
             this.btnSetGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetGrid.ForeColor = System.Drawing.Color.Black;
-            this.btnSetGrid.Location = new System.Drawing.Point(94, 476);
+            this.btnSetGrid.Location = new System.Drawing.Point(94, 417);
             this.btnSetGrid.Name = "btnSetGrid";
             this.btnSetGrid.Size = new System.Drawing.Size(91, 35);
             this.btnSetGrid.TabIndex = 15;
@@ -422,7 +422,7 @@
             this.btnScreenShot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScreenShot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScreenShot.ForeColor = System.Drawing.Color.Black;
-            this.btnScreenShot.Location = new System.Drawing.Point(374, 476);
+            this.btnScreenShot.Location = new System.Drawing.Point(374, 417);
             this.btnScreenShot.Name = "btnScreenShot";
             this.btnScreenShot.Size = new System.Drawing.Size(100, 35);
             this.btnScreenShot.TabIndex = 17;
@@ -440,7 +440,7 @@
             this.btnSetObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetObject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetObject.ForeColor = System.Drawing.Color.Black;
-            this.btnSetObject.Location = new System.Drawing.Point(4, 476);
+            this.btnSetObject.Location = new System.Drawing.Point(4, 417);
             this.btnSetObject.Name = "btnSetObject";
             this.btnSetObject.Size = new System.Drawing.Size(90, 35);
             this.btnSetObject.TabIndex = 13;
@@ -452,7 +452,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Location = new System.Drawing.Point(575, 567);
+            this.label11.Location = new System.Drawing.Point(575, 529);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 46);
             this.label11.TabIndex = 22;
@@ -465,7 +465,7 @@
             this.groupBox3.Controls.Add(this.lblSpudZ);
             this.groupBox3.Controls.Add(this.lblSpudY);
             this.groupBox3.Controls.Add(this.lblSpudX);
-            this.groupBox3.Location = new System.Drawing.Point(575, 609);
+            this.groupBox3.Location = new System.Drawing.Point(575, 571);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(125, 123);
             this.groupBox3.TabIndex = 20;
@@ -502,7 +502,7 @@
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Location = new System.Drawing.Point(389, 567);
+            this.label15.Location = new System.Drawing.Point(389, 529);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(125, 46);
             this.label15.TabIndex = 18;
@@ -515,7 +515,7 @@
             this.groupBox4.Controls.Add(this.lblDischargeMouthZ);
             this.groupBox4.Controls.Add(this.lblDischargeMouthY);
             this.groupBox4.Controls.Add(this.lblDischargeMouthX);
-            this.groupBox4.Location = new System.Drawing.Point(389, 609);
+            this.groupBox4.Location = new System.Drawing.Point(389, 571);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(125, 123);
             this.groupBox4.TabIndex = 16;
@@ -552,7 +552,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(203, 567);
+            this.label7.Location = new System.Drawing.Point(203, 529);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 46);
             this.label7.TabIndex = 14;
@@ -565,7 +565,7 @@
             this.groupBox2.Controls.Add(this.lblGPS2Z);
             this.groupBox2.Controls.Add(this.lblGPS2Y);
             this.groupBox2.Controls.Add(this.lblGPS2X);
-            this.groupBox2.Location = new System.Drawing.Point(203, 609);
+            this.groupBox2.Location = new System.Drawing.Point(203, 571);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(125, 123);
             this.groupBox2.TabIndex = 12;
@@ -602,7 +602,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(17, 567);
+            this.label6.Location = new System.Drawing.Point(17, 529);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 46);
             this.label6.TabIndex = 11;
@@ -615,7 +615,7 @@
             this.groupBox1.Controls.Add(this.lblGPS1Z);
             this.groupBox1.Controls.Add(this.lblGPS1Y);
             this.groupBox1.Controls.Add(this.lblGPS1X);
-            this.groupBox1.Location = new System.Drawing.Point(17, 609);
+            this.groupBox1.Location = new System.Drawing.Point(17, 571);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(125, 123);
             this.groupBox1.TabIndex = 10;
@@ -653,7 +653,7 @@
             this.lblP3Normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblP3Normal.BackColor = System.Drawing.Color.Red;
             this.lblP3Normal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblP3Normal.Location = new System.Drawing.Point(336, 841);
+            this.lblP3Normal.Location = new System.Drawing.Point(336, 795);
             this.lblP3Normal.Name = "lblP3Normal";
             this.lblP3Normal.Size = new System.Drawing.Size(70, 40);
             this.lblP3Normal.TabIndex = 38;
@@ -665,7 +665,7 @@
             this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label36.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label36.Location = new System.Drawing.Point(265, 841);
+            this.label36.Location = new System.Drawing.Point(265, 795);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(70, 40);
             this.label36.TabIndex = 37;
@@ -677,7 +677,7 @@
             this.lblSS2Normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSS2Normal.BackColor = System.Drawing.Color.Red;
             this.lblSS2Normal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSS2Normal.Location = new System.Drawing.Point(577, 801);
+            this.lblSS2Normal.Location = new System.Drawing.Point(577, 755);
             this.lblSS2Normal.Name = "lblSS2Normal";
             this.lblSS2Normal.Size = new System.Drawing.Size(70, 40);
             this.lblSS2Normal.TabIndex = 36;
@@ -689,7 +689,7 @@
             this.lblSS1Normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSS1Normal.BackColor = System.Drawing.Color.Red;
             this.lblSS1Normal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSS1Normal.Location = new System.Drawing.Point(577, 761);
+            this.lblSS1Normal.Location = new System.Drawing.Point(577, 715);
             this.lblSS1Normal.Name = "lblSS1Normal";
             this.lblSS1Normal.Size = new System.Drawing.Size(70, 40);
             this.lblSS1Normal.TabIndex = 35;
@@ -701,7 +701,7 @@
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label33.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label33.Location = new System.Drawing.Point(506, 801);
+            this.label33.Location = new System.Drawing.Point(506, 755);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(70, 40);
             this.label33.TabIndex = 34;
@@ -713,7 +713,7 @@
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label34.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label34.Location = new System.Drawing.Point(506, 761);
+            this.label34.Location = new System.Drawing.Point(506, 715);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(70, 40);
             this.label34.TabIndex = 33;
@@ -725,7 +725,7 @@
             this.lblP2Normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblP2Normal.BackColor = System.Drawing.Color.Red;
             this.lblP2Normal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblP2Normal.Location = new System.Drawing.Point(336, 801);
+            this.lblP2Normal.Location = new System.Drawing.Point(336, 755);
             this.lblP2Normal.Name = "lblP2Normal";
             this.lblP2Normal.Size = new System.Drawing.Size(70, 40);
             this.lblP2Normal.TabIndex = 32;
@@ -737,7 +737,7 @@
             this.lblP1Normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblP1Normal.BackColor = System.Drawing.Color.Red;
             this.lblP1Normal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblP1Normal.Location = new System.Drawing.Point(336, 761);
+            this.lblP1Normal.Location = new System.Drawing.Point(336, 715);
             this.lblP1Normal.Name = "lblP1Normal";
             this.lblP1Normal.Size = new System.Drawing.Size(70, 40);
             this.lblP1Normal.TabIndex = 31;
@@ -749,7 +749,7 @@
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label29.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label29.Location = new System.Drawing.Point(265, 801);
+            this.label29.Location = new System.Drawing.Point(265, 755);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(70, 40);
             this.label29.TabIndex = 30;
@@ -761,7 +761,7 @@
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label30.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label30.Location = new System.Drawing.Point(265, 761);
+            this.label30.Location = new System.Drawing.Point(265, 715);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(70, 40);
             this.label30.TabIndex = 29;
@@ -773,7 +773,7 @@
             this.lblGPS2RTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblGPS2RTK.BackColor = System.Drawing.Color.Red;
             this.lblGPS2RTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblGPS2RTK.Location = new System.Drawing.Point(110, 801);
+            this.lblGPS2RTK.Location = new System.Drawing.Point(115, 755);
             this.lblGPS2RTK.Name = "lblGPS2RTK";
             this.lblGPS2RTK.Size = new System.Drawing.Size(70, 40);
             this.lblGPS2RTK.TabIndex = 28;
@@ -785,7 +785,7 @@
             this.lblGPS1RTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblGPS1RTK.BackColor = System.Drawing.Color.Red;
             this.lblGPS1RTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblGPS1RTK.Location = new System.Drawing.Point(110, 761);
+            this.lblGPS1RTK.Location = new System.Drawing.Point(115, 715);
             this.lblGPS1RTK.Name = "lblGPS1RTK";
             this.lblGPS1RTK.Size = new System.Drawing.Size(70, 40);
             this.lblGPS1RTK.TabIndex = 27;
@@ -797,7 +797,7 @@
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label24.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label24.Location = new System.Drawing.Point(39, 801);
+            this.label24.Location = new System.Drawing.Point(44, 755);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(70, 40);
             this.label24.TabIndex = 26;
@@ -809,7 +809,7 @@
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label23.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label23.Location = new System.Drawing.Point(39, 761);
+            this.label23.Location = new System.Drawing.Point(44, 715);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(70, 40);
             this.label23.TabIndex = 25;
@@ -1125,7 +1125,7 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(703, 393);
+            this.gmap.Size = new System.Drawing.Size(703, 332);
             this.gmap.TabIndex = 102;
             this.gmap.Zoom = 0D;
             // 
@@ -1144,13 +1144,13 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(733, 635);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(743, 618);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(700, 273);
+            this.chart1.Size = new System.Drawing.Size(700, 222);
             this.chart1.TabIndex = 104;
             this.chart1.Text = "chart1";
             // 
@@ -1165,7 +1165,7 @@
             this.btnShowObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowObject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowObject.ForeColor = System.Drawing.Color.Black;
-            this.btnShowObject.Location = new System.Drawing.Point(185, 476);
+            this.btnShowObject.Location = new System.Drawing.Point(185, 417);
             this.btnShowObject.Name = "btnShowObject";
             this.btnShowObject.Size = new System.Drawing.Size(98, 35);
             this.btnShowObject.TabIndex = 111;
@@ -1184,7 +1184,7 @@
             this.btnShowGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowGrid.ForeColor = System.Drawing.Color.Black;
-            this.btnShowGrid.Location = new System.Drawing.Point(283, 476);
+            this.btnShowGrid.Location = new System.Drawing.Point(283, 417);
             this.btnShowGrid.Name = "btnShowGrid";
             this.btnShowGrid.Size = new System.Drawing.Size(91, 35);
             this.btnShowGrid.TabIndex = 112;
@@ -1197,10 +1197,11 @@
             this.txtBearing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBearing.BackColor = System.Drawing.Color.LightSkyBlue;
             this.txtBearing.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBearing.Location = new System.Drawing.Point(659, 482);
-            this.txtBearing.MinimumSize = new System.Drawing.Size(4, 35);
+            this.txtBearing.Location = new System.Drawing.Point(660, 417);
+            this.txtBearing.MinimumSize = new System.Drawing.Size(4, 23);
+            this.txtBearing.Multiline = true;
             this.txtBearing.Name = "txtBearing";
-            this.txtBearing.Size = new System.Drawing.Size(52, 23);
+            this.txtBearing.Size = new System.Drawing.Size(52, 35);
             this.txtBearing.TabIndex = 113;
             this.txtBearing.Text = "0";
             this.txtBearing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1250,93 +1251,93 @@
             this.lblSS2Min.Text = "0mm";
             this.lblSS2Min.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // lblElevationMax
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Location = new System.Drawing.Point(715, 332);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 20);
-            this.label8.TabIndex = 119;
-            this.label8.Text = "0.00m";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblElevationMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblElevationMax.Location = new System.Drawing.Point(715, 332);
+            this.lblElevationMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblElevationMax.Name = "lblElevationMax";
+            this.lblElevationMax.Size = new System.Drawing.Size(43, 20);
+            this.lblElevationMax.TabIndex = 119;
+            this.lblElevationMax.Text = "0.00m";
+            this.lblElevationMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // lblElevationMin
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Location = new System.Drawing.Point(715, 579);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 20);
-            this.label9.TabIndex = 118;
-            this.label9.Text = "0.00m";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblElevationMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblElevationMin.Location = new System.Drawing.Point(715, 579);
+            this.lblElevationMin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblElevationMin.Name = "lblElevationMin";
+            this.lblElevationMin.Size = new System.Drawing.Size(43, 20);
+            this.lblElevationMin.TabIndex = 118;
+            this.lblElevationMin.Text = "0.00m";
+            this.lblElevationMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // lblPressureMin1
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.Location = new System.Drawing.Point(973, 539);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 20);
-            this.label10.TabIndex = 120;
-            this.label10.Text = "0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPressureMin1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPressureMin1.Location = new System.Drawing.Point(973, 539);
+            this.lblPressureMin1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPressureMin1.Name = "lblPressureMin1";
+            this.lblPressureMin1.Size = new System.Drawing.Size(43, 20);
+            this.lblPressureMin1.TabIndex = 120;
+            this.lblPressureMin1.Text = "0";
+            this.lblPressureMin1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // lblPressureMax1
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.Location = new System.Drawing.Point(1023, 539);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 20);
-            this.label12.TabIndex = 121;
-            this.label12.Text = "10";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPressureMax1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPressureMax1.Location = new System.Drawing.Point(1023, 539);
+            this.lblPressureMax1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPressureMax1.Name = "lblPressureMax1";
+            this.lblPressureMax1.Size = new System.Drawing.Size(43, 20);
+            this.lblPressureMax1.TabIndex = 121;
+            this.lblPressureMax1.Text = "10";
+            this.lblPressureMax1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // lblPressureMax2
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.Location = new System.Drawing.Point(1112, 539);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 20);
-            this.label13.TabIndex = 123;
-            this.label13.Text = "10";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPressureMax2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPressureMax2.Location = new System.Drawing.Point(1112, 539);
+            this.lblPressureMax2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPressureMax2.Name = "lblPressureMax2";
+            this.lblPressureMax2.Size = new System.Drawing.Size(43, 20);
+            this.lblPressureMax2.TabIndex = 123;
+            this.lblPressureMax2.Text = "10";
+            this.lblPressureMax2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // lblPressureMin2
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.Location = new System.Drawing.Point(1062, 539);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 20);
-            this.label14.TabIndex = 122;
-            this.label14.Text = "0";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPressureMin2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPressureMin2.Location = new System.Drawing.Point(1062, 539);
+            this.lblPressureMin2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPressureMin2.Name = "lblPressureMin2";
+            this.lblPressureMin2.Size = new System.Drawing.Size(43, 20);
+            this.lblPressureMin2.TabIndex = 122;
+            this.lblPressureMin2.Text = "0";
+            this.lblPressureMin2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // lblPressureMax3
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.Location = new System.Drawing.Point(1205, 539);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 20);
-            this.label16.TabIndex = 125;
-            this.label16.Text = "10";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPressureMax3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPressureMax3.Location = new System.Drawing.Point(1205, 539);
+            this.lblPressureMax3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPressureMax3.Name = "lblPressureMax3";
+            this.lblPressureMax3.Size = new System.Drawing.Size(43, 20);
+            this.lblPressureMax3.TabIndex = 125;
+            this.lblPressureMax3.Text = "10";
+            this.lblPressureMax3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // lblPressureMin3
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.Location = new System.Drawing.Point(1155, 539);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 20);
-            this.label17.TabIndex = 124;
-            this.label17.Text = "0";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPressureMin3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPressureMin3.Location = new System.Drawing.Point(1155, 539);
+            this.lblPressureMin3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPressureMin3.Name = "lblPressureMin3";
+            this.lblPressureMin3.Size = new System.Drawing.Size(43, 20);
+            this.lblPressureMin3.TabIndex = 124;
+            this.lblPressureMin3.Text = "0";
+            this.lblPressureMin3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTrimOnPB
             // 
@@ -1359,6 +1360,16 @@
             this.lblTideReading.TabIndex = 127;
             this.lblTideReading.Text = "0.00m";
             this.lblTideReading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(1, 888);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(16, 13);
+            this.lblStatus.TabIndex = 128;
+            this.lblStatus.Text = "...";
             // 
             // gaugeControl3
             // 
@@ -1432,31 +1443,22 @@
             this.verticalBar1.Text = "verticalBar1";
             this.verticalBar1.Value = 0;
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(1, 943);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(16, 13);
-            this.lblStatus.TabIndex = 128;
-            this.lblStatus.Text = "...";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 965);
+            this.ClientSize = new System.Drawing.Size(1443, 847);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblTideReading);
             this.Controls.Add(this.lblTrimOnPB);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblPressureMax3);
+            this.Controls.Add(this.lblPressureMin3);
+            this.Controls.Add(this.lblPressureMax2);
+            this.Controls.Add(this.lblPressureMin2);
+            this.Controls.Add(this.lblPressureMax1);
+            this.Controls.Add(this.lblPressureMin1);
+            this.Controls.Add(this.lblElevationMax);
+            this.Controls.Add(this.lblElevationMin);
             this.Controls.Add(this.lblSS2Max);
             this.Controls.Add(this.lblSS2Min);
             this.Controls.Add(this.lblSS1Max);
@@ -1639,14 +1641,14 @@
         private System.Windows.Forms.Label lblSS1Max;
         private System.Windows.Forms.Label lblSS2Max;
         private System.Windows.Forms.Label lblSS2Min;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblElevationMax;
+        private System.Windows.Forms.Label lblElevationMin;
+        private System.Windows.Forms.Label lblPressureMin1;
+        private System.Windows.Forms.Label lblPressureMax1;
+        private System.Windows.Forms.Label lblPressureMax2;
+        private System.Windows.Forms.Label lblPressureMin2;
+        private System.Windows.Forms.Label lblPressureMax3;
+        private System.Windows.Forms.Label lblPressureMin3;
         private System.Windows.Forms.Label lblTrimOnPB;
         private System.Windows.Forms.Label lblTideReading;
         private System.Windows.Forms.Label lblStatus;

@@ -60,8 +60,8 @@ namespace Monitoring_System
         }
         public string GPS2zValue
         {
-            get => lblSetting3GPS1z.Text;
-            set => lblSetting3GPS1z.Text = value;
+            get => lblSetting3GPS2z.Text;
+            set => lblSetting3GPS2z.Text = value;
         }
 
         public string GPS2Mode
@@ -77,7 +77,7 @@ namespace Monitoring_System
 
         public string WorkingArea
         {
-            get => lblSetting3WorkingArea.Text;
+            get => lblSetting3WorkingArea.Text; 
             set => lblSetting3WorkingArea.Text = value;
         }
         public string X1
@@ -92,33 +92,33 @@ namespace Monitoring_System
         }
         public string X2
         {
-            get => lblSetting3x1.Text;
-            set => lblSetting3x1.Text = value;
+            get => lblSetting3x2.Text;
+            set => lblSetting3x2.Text = value;
         }
         public string Y2
         {
-            get => lblSetting3y1.Text;
-            set => lblSetting3y1.Text = value;
+            get => lblSetting3y2.Text;
+            set => lblSetting3y2.Text = value;
         }
         public string X3
         {
-            get => lblSetting3x1.Text;
-            set => lblSetting3x1.Text = value;
+            get => lblSetting3x3.Text;
+            set => lblSetting3x3.Text = value;
         }
         public string Y3
         {
-            get => lblSetting3y1.Text;
-            set => lblSetting3y1.Text = value;
+            get => lblSetting3y3.Text;
+            set => lblSetting3y3.Text = value;
         }
         public string X4
         {
-            get => lblSetting3x1.Text;
-            set => lblSetting3x1.Text = value;
+            get => lblSetting3x4.Text;
+            set => lblSetting3x4.Text = value;
         }
         public string Y4
         {
-            get => lblSetting3y1.Text;
-            set => lblSetting3y1.Text = value;
+            get => lblSetting3y4.Text;
+            set => lblSetting3y4.Text = value;
         }
         public string P1
         {
@@ -169,6 +169,51 @@ namespace Monitoring_System
         {
             get => lblSetting3Autolet.Text;
             set => lblSetting3Autolet.Text = value;
+        }
+        public string PressureMax
+        {
+            get => txtSetting3PMax.Text;
+            set => txtSetting3PMax.Text = value;
+        }
+        public string PressureMin
+        {
+            get => txtSetting3PMin.Text;
+            set => txtSetting3PMin.Text = value;
+        }
+        public string PressureDangerousLimit
+        {
+            get => txtSetting3PDLimit.Text;
+            set => txtSetting3PDLimit.Text = value;
+        }
+        public string ElevationMax
+        {
+            get => txtSetting3ElevationMax.Text;
+            set => txtSetting3ElevationMax.Text = value;
+        }
+        public string ElevationMin
+        {
+            get => txtSetting3ElevationMin.Text;
+            set => txtSetting3ElevationMin.Text = value;
+        }
+        public string ElevationInterval
+        {
+            get => txtSetting3ElevationInterval.Text;
+            set => txtSetting3ElevationInterval.Text = value;
+        }
+        public string StrokeSensorMax
+        {
+            get => txtSetting3SSMax.Text;
+            set => txtSetting3SSMax.Text = value;
+        }
+        public string StrokeSensorMin
+        {
+            get => txtSetting3SSMin.Text;
+            set => txtSetting3SSMin.Text = value;
+        }
+        public string StrokeSensorInterval
+        {
+            get => txtSetting3SSInterval.Text;
+            set => txtSetting3SSInterval.Text = value;
         }
         private void btnSetGauge_Click(object sender, EventArgs e)
         {

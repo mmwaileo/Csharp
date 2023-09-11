@@ -115,8 +115,9 @@
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(70, 254);
             this.textBox4.MinimumSize = new System.Drawing.Size(90, 30);
+            this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 26);
+            this.textBox4.Size = new System.Drawing.Size(90, 33);
             this.textBox4.TabIndex = 509;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -127,8 +128,9 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(70, 224);
             this.textBox2.MinimumSize = new System.Drawing.Size(90, 30);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 26);
+            this.textBox2.Size = new System.Drawing.Size(90, 32);
             this.textBox2.TabIndex = 508;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -139,8 +141,9 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(70, 194);
             this.textBox3.MinimumSize = new System.Drawing.Size(90, 30);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 26);
+            this.textBox3.Size = new System.Drawing.Size(90, 33);
             this.textBox3.TabIndex = 507;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -151,8 +154,9 @@
             this.txtSetting2U.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting2U.Location = new System.Drawing.Point(70, 164);
             this.txtSetting2U.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting2U.Multiline = true;
             this.txtSetting2U.Name = "txtSetting2U";
-            this.txtSetting2U.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting2U.Size = new System.Drawing.Size(90, 32);
             this.txtSetting2U.TabIndex = 506;
             this.txtSetting2U.Text = "2.000";
             this.txtSetting2U.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -164,8 +168,9 @@
             this.txtSetting2S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting2S.Location = new System.Drawing.Point(70, 104);
             this.txtSetting2S.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting2S.Multiline = true;
             this.txtSetting2S.Name = "txtSetting2S";
-            this.txtSetting2S.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting2S.Size = new System.Drawing.Size(90, 32);
             this.txtSetting2S.TabIndex = 505;
             this.txtSetting2S.Text = "3.500";
             this.txtSetting2S.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -177,8 +182,9 @@
             this.txtSetting2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting2T.Location = new System.Drawing.Point(70, 134);
             this.txtSetting2T.MinimumSize = new System.Drawing.Size(90, 30);
+            this.txtSetting2T.Multiline = true;
             this.txtSetting2T.Name = "txtSetting2T";
-            this.txtSetting2T.Size = new System.Drawing.Size(90, 26);
+            this.txtSetting2T.Size = new System.Drawing.Size(90, 32);
             this.txtSetting2T.TabIndex = 504;
             this.txtSetting2T.Text = "1.500";
             this.txtSetting2T.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

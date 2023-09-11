@@ -4,3 +4,9 @@ D:\repos\Monitoring System\Sharp7\obj\Release\Sharp7.csproj.AssemblyReference.ca
 D:\repos\Monitoring System\Sharp7\obj\Release\Sharp7.csproj.CoreCompileInputs.cache
 D:\repos\Monitoring System\Sharp7\obj\Release\Sharp7.dll
 D:\repos\Monitoring System\Sharp7\obj\Release\Sharp7.pdb
+D:\repos\MonitoringSystem2\Sharp7\bin\Release\Sharp7.dll
+D:\repos\MonitoringSystem2\Sharp7\bin\Release\Sharp7.pdb
+D:\repos\MonitoringSystem2\Sharp7\obj\Release\Sharp7.csproj.AssemblyReference.cache
+D:\repos\MonitoringSystem2\Sharp7\obj\Release\Sharp7.csproj.CoreCompileInputs.cache
+D:\repos\MonitoringSystem2\Sharp7\obj\Release\Sharp7.dll
+D:\repos\MonitoringSystem2\Sharp7\obj\Release\Sharp7.pdb

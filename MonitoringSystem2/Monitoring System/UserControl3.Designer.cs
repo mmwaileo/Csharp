@@ -1291,6 +1291,7 @@
             this.txtSetting3SSInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3SSInterval.Location = new System.Drawing.Point(174, 436);
             this.txtSetting3SSInterval.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSInterval.Multiline = true;
             this.txtSetting3SSInterval.Name = "txtSetting3SSInterval";
             this.txtSetting3SSInterval.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3SSInterval.TabIndex = 503;
@@ -1303,6 +1304,7 @@
             this.txtSetting3SSMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3SSMin.Location = new System.Drawing.Point(174, 390);
             this.txtSetting3SSMin.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSMin.Multiline = true;
             this.txtSetting3SSMin.Name = "txtSetting3SSMin";
             this.txtSetting3SSMin.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3SSMin.TabIndex = 502;
@@ -1315,6 +1317,7 @@
             this.txtSetting3SSMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3SSMax.Location = new System.Drawing.Point(174, 344);
             this.txtSetting3SSMax.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3SSMax.Multiline = true;
             this.txtSetting3SSMax.Name = "txtSetting3SSMax";
             this.txtSetting3SSMax.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3SSMax.TabIndex = 501;
@@ -1327,6 +1330,7 @@
             this.txtSetting3ElevationInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3ElevationInterval.Location = new System.Drawing.Point(174, 298);
             this.txtSetting3ElevationInterval.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationInterval.Multiline = true;
             this.txtSetting3ElevationInterval.Name = "txtSetting3ElevationInterval";
             this.txtSetting3ElevationInterval.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3ElevationInterval.TabIndex = 500;
@@ -1339,6 +1343,7 @@
             this.txtSetting3ElevationMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3ElevationMin.Location = new System.Drawing.Point(174, 252);
             this.txtSetting3ElevationMin.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationMin.Multiline = true;
             this.txtSetting3ElevationMin.Name = "txtSetting3ElevationMin";
             this.txtSetting3ElevationMin.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3ElevationMin.TabIndex = 499;
@@ -1351,6 +1356,7 @@
             this.txtSetting3ElevationMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3ElevationMax.Location = new System.Drawing.Point(174, 206);
             this.txtSetting3ElevationMax.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3ElevationMax.Multiline = true;
             this.txtSetting3ElevationMax.Name = "txtSetting3ElevationMax";
             this.txtSetting3ElevationMax.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3ElevationMax.TabIndex = 498;
@@ -1363,6 +1369,7 @@
             this.txtSetting3PDLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3PDLimit.Location = new System.Drawing.Point(174, 160);
             this.txtSetting3PDLimit.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3PDLimit.Multiline = true;
             this.txtSetting3PDLimit.Name = "txtSetting3PDLimit";
             this.txtSetting3PDLimit.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3PDLimit.TabIndex = 497;
@@ -1375,6 +1382,7 @@
             this.txtSetting3PMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3PMin.Location = new System.Drawing.Point(174, 114);
             this.txtSetting3PMin.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3PMin.Multiline = true;
             this.txtSetting3PMin.Name = "txtSetting3PMin";
             this.txtSetting3PMin.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3PMin.TabIndex = 496;
@@ -1387,6 +1395,7 @@
             this.txtSetting3PMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetting3PMax.Location = new System.Drawing.Point(174, 68);
             this.txtSetting3PMax.MinimumSize = new System.Drawing.Size(145, 44);
+            this.txtSetting3PMax.Multiline = true;
             this.txtSetting3PMax.Name = "txtSetting3PMax";
             this.txtSetting3PMax.Size = new System.Drawing.Size(145, 44);
             this.txtSetting3PMax.TabIndex = 495;

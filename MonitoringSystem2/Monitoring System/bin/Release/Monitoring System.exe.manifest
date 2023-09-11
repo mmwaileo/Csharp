@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoring System.exe" size="156104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoring System.exe" size="183240">
       <assemblyIdentity name="Monitoring System" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>huFAKHlWJcmi8Fiy7mvEXp0dPlKVUm1AJC7iGPSNxw0=</dsig:DigestValue>
+        <dsig:DigestValue>OB3YN2JbjFaQc+i263MJ7nNhFDfr1ygwaFe+oDOKqsY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,7 +133,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UBVhl8cuz76o7W1oHXo0Fj2yz/cvmpJXYGsMuit7CBs=</dsig:DigestValue>
+        <dsig:DigestValue>ZwMkpY3ZjwDSQdRRp864bx3yjMNUAs6WOxzdN/you/I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -205,7 +205,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v5WqL++Ll3zAA+HzdOx8H1qihI1NUoxe5arcQhx2iDk=</dsig:DigestValue>
+        <dsig:DigestValue>opSS8hxxxhb0WGk0RfT498R7nbyDDIoH8dbANrrJOQU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

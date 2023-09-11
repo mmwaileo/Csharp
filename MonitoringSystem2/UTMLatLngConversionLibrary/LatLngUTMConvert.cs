@@ -334,7 +334,6 @@ namespace UTMLatLngConversionLibrary
             var zeta = ((eccSquare * Math.Pow(a, 2)) / 2) * Math.Pow(Math.Cos(fi), 2);
             var xi = a * (1 - (zeta / 3));
 
-
             var A1 = Math.Sin(2 * fi);
             var A2 = A1 * Math.Pow(Math.Cos(fi), 2);
 

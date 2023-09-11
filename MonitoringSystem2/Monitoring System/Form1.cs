@@ -20,6 +20,7 @@ using Microsoft.VisualBasic.FileIO;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Threading;
+using Monitoring_System.Properties;
 //using System.Windows.Controls;
 //using System.Windows.Controls;
 //using System.Windows;
@@ -47,7 +48,7 @@ namespace Monitoring_System
         double currentGPS2Latitude, currentGPS2Longitude;
         string workingAreaName = "";
         bool boolUpdateGPS1GUI =false, boolUpdateGPS2GUI = false, boolUpdateSensorGUI = false;
-        public bool boolIsGPS1Up = false, boolIsGPS2Up = false, boolIsSensorUp = false;
+        public bool boolIsGPS1Up=false, boolIsGPS2Up=false, boolIsSensorUp = false;
         string GPS1Mode = "", GPS2Mode = "";
 
         //for plotting live chart
@@ -116,15 +117,14 @@ namespace Monitoring_System
 
         string bargeName = "AMOS16";
         string startArea = "";//"C6";
-        string completeArea = "D7";
-        string startDMX = "1111111";
-        string startDMY = "2222222";
-        string completeDMX = "3333333";
-        string completeDMY = "4444444";
-        string finalElevation = "1.5";
-        string startTime = "1030";
-
-        string completeTime = "1630";
+        string completeArea = "";
+        string startDMX = "";
+        string startDMY = "";
+        string completeDMX = "";
+        string completeDMY = "";
+        string finalElevation = "";
+        string startTime = "";
+        string completeTime = "";
 
         double setting1R = 5.538;
         double setting1H = 7.5;
@@ -132,6 +132,7 @@ namespace Monitoring_System
         double setting1F = 3.395;
         double setting1N = 2.497;
         double setting1M = 1.73;
+
         double setting2T = 1.5;   //no information yet
         double setting2U = 2;   // no information yet
 
@@ -143,12 +144,10 @@ namespace Monitoring_System
             InitializeComponent();
             InitializeGMap();
             LoadImageIntoPictureBox();
-            //InitXData();
             InitializeChart();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             /*
             //timer for 1 sec to plot chart
             t_1SecPlotChart.Interval = 1000;    //in millisecond
@@ -160,7 +159,7 @@ namespace Monitoring_System
             t_1Sec.Interval = 1000;    //in millisecond
             t_1Sec.Tick += new EventHandler(this.t_Tick_1Sec);
             t_1Sec.Start();
-            
+
             /*
             string ipAddress1 = "192.168.0.2"; // GPS1 Reading
             int port1 = 5017; // GPS1 port through RS232 to ethernet converter
@@ -189,7 +188,7 @@ namespace Monitoring_System
                 //Console.WriteLine($"The IP address {ipAddress} and port {port} is not available.");
             }
             */
-            
+
             //timer for 5 seconds
             t_5Sec.Interval = 5000;    //in millisecond
             t_5Sec.Tick += new EventHandler(this.t_Tick_5Sec);
@@ -228,13 +227,70 @@ namespace Monitoring_System
             userControl1.Hide();
             userControl2.Hide();
             userControl3.Hide();
+
+            BringToFrontAndActivate();
+            InitTimers();
+
+            StartGPS1Timer();
+            StartGPS2Timer();
+            StartSensorTimer();
+            StartChartPlottingTimer();
+            
+        }
+        private void InitTimers()
+        {
+            
+            if (IsGPS1Up())
+            {
+                boolIsGPS1Up = true;
+                boolUpdateGPS1GUI = true;
+                boolUpdateSensorGUI = true;
+                boolIsSensorUp = true;
+            }
+            else
+            {
+                boolIsGPS1Up = false;
+                boolUpdateGPS1GUI = false;
+                boolUpdateSensorGUI = false;
+                boolIsSensorUp = false;
+            }
+            if (IsGPS2Up())
+            {
+                boolIsGPS2Up = true;
+                boolUpdateGPS2GUI = true;
+                boolUpdateSensorGUI = true;
+                // boolIsSensorUp = true;
+            }
+            else
+            {
+                boolIsGPS2Up = false;
+                boolUpdateGPS2GUI = false;
+                boolUpdateSensorGUI = false;
+                // boolIsSensorUp = false;
+            }
+        }
+        private void BringToFrontAndActivate()
+        {
+            this.WindowState = FormWindowState.Minimized;  // Minimize first
+            this.Show();
+            this.WindowState = FormWindowState.Normal;     // Then restore
+
+            this.TopMost = true;  // Bring form to top
+            this.Activate();      // Activate the form
+            this.TopMost = false; // Optional: Set TopMost back to false if you don't want it to stay on top
         }
         private void StartGPS1Timer()
         {
+            /*
+            //timer for 1 sec
+            t_1Sec_GPS1GUI.Interval = 3000;    //in millisecond
+            t_1Sec_GPS1GUI.Tick += new EventHandler(this.t_Tick_1Sec_GPS1GUI);
+            t_1Sec_GPS1GUI.Start();
+            */
             if (boolIsGPS1Up && !t_1Sec_GPS1GUI.Enabled)
             {
                 //timer for 1 sec
-                t_1Sec_GPS1GUI.Interval = 1000;    //in millisecond
+                t_1Sec_GPS1GUI.Interval = 3000;    //in millisecond
                 t_1Sec_GPS1GUI.Tick += new EventHandler(this.t_Tick_1Sec_GPS1GUI);
                 t_1Sec_GPS1GUI.Start();
             }
@@ -242,13 +298,21 @@ namespace Monitoring_System
             {
                 t_1Sec_GPS1GUI.Stop();
             }
+            
         }
         private void StartGPS2Timer()
         {
+            /*
+            //timer for 1 sec
+            t_1Sec_GPS2GUI.Interval = 3000;    //in millisecond
+            t_1Sec_GPS2GUI.Tick += new EventHandler(this.t_Tick_1Sec_GPS2GUI);
+            t_1Sec_GPS2GUI.Start();
+            */
+            
             if (boolIsGPS2Up && !t_1Sec_GPS2GUI.Enabled)
             {
                 //timer for 1 sec
-                t_1Sec_GPS2GUI.Interval = 1000;    //in millisecond
+                t_1Sec_GPS2GUI.Interval = 3000;    //in millisecond
                 t_1Sec_GPS2GUI.Tick += new EventHandler(this.t_Tick_1Sec_GPS2GUI);
                 t_1Sec_GPS2GUI.Start();
             }
@@ -256,13 +320,21 @@ namespace Monitoring_System
             {
                 t_1Sec_GPS2GUI.Stop();
             }
+            
         }
         private void StartSensorTimer()
         {
+            /*
+            //timer for 1 sec
+            t_1Sec_SensorGUI.Interval = 3000;    //in millisecond
+            t_1Sec_SensorGUI.Tick += new EventHandler(this.t_Tick_1Sec_SensorGUI);
+            t_1Sec_SensorGUI.Start();
+            */
+            
             if (boolIsSensorUp && !t_1Sec_SensorGUI.Enabled)
             {
                 //timer for 1 sec
-                t_1Sec_SensorGUI.Interval = 1000;    //in millisecond
+                t_1Sec_SensorGUI.Interval = 3000;    //in millisecond
                 t_1Sec_SensorGUI.Tick += new EventHandler(this.t_Tick_1Sec_SensorGUI);
                 t_1Sec_SensorGUI.Start();
             }
@@ -274,6 +346,13 @@ namespace Monitoring_System
         }
         private void StartChartPlottingTimer()
         {
+            
+            //timer for 1 sec to plot chart
+            t_1SecPlotChart.Interval = 1000;    //in millisecond
+            t_1SecPlotChart.Tick += new EventHandler(this.timer1_TickPlotChart);
+            t_1SecPlotChart.Start();
+            
+            /*
             if (boolIsSensorUp && !t_1Sec_SensorGUI.Enabled)
             {
                 //timer for 1 sec to plot chart
@@ -285,8 +364,8 @@ namespace Monitoring_System
             {
                 t_1SecPlotChart.Stop();
             }
-
             
+            */
         }
         private void t_Tick_1Sec_GPS1GUI(object sender, EventArgs e)
         {
@@ -314,11 +393,8 @@ namespace Monitoring_System
         }
 
         private void t_Tick_5Sec(object sender, EventArgs e)
-        {
-            StartGPS1Timer();
-            StartGPS2Timer();
-            StartSensorTimer();
-            StartChartPlottingTimer();
+        {            
+            //StartSensorTimer();
             GetCurrentWorkingAreaName(currentGPSPoint);
             UpdateUserControl3GUI();
         }
@@ -331,31 +407,72 @@ namespace Monitoring_System
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            t_1Sec.Stop();
-            t_5Sec.Stop();
-            t_1Min.Stop();
-            t_1SecPlotChart.Stop();
+            if(t_1Sec.Enabled)
+                t_1Sec.Stop();
+
+            if (t_5Sec.Enabled)
+                t_5Sec.Stop();
+
+            if (t_1Min.Enabled)
+                t_1Min.Stop();
+
+            if (t_1Sec_GPS1GUI.Enabled)
+                t_1Sec_GPS1GUI.Stop();
+
+            if (t_1Sec_GPS2GUI.Enabled)
+                t_1Sec_GPS2GUI.Stop();
+
+            if (t_1Sec_SensorGUI.Enabled)
+                t_1Sec_SensorGUI.Stop();
+
+            if (t_1SecPlotChart.Enabled)
+                t_1SecPlotChart.Stop();
         }
         private void UserControl1_SetDraftClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
         }
 
         private void UserControl1_SetDimensionClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            setting1R = Convert.ToDouble(userControl1.SetDimension_R);
+            setting1H = Convert.ToDouble(userControl1.SetDimension_H);
+            setting1J = Convert.ToDouble(userControl1.SetDimension_J);
+            setting1F = Convert.ToDouble(userControl1.SetDimension_F);
+            setting1N = Convert.ToDouble(userControl1.SetDimension_N);
+            setting1M = Convert.ToDouble(userControl1.SetDimension_M);
         }
 
         private void UserControl2_SetDimensionClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            setting2T = Convert.ToDouble(userControl2.SetDimension_T);
+            setting2U = Convert.ToDouble(userControl2.SetDimension_U);
         }
 
         //event handler for set gauge event in userControl3 (setting 3)
         private void UserControl3_SetGaugeClicked(object sender, EventArgs e)
         {
-           // MessageBox.Show("Setting 3 Event show");
+            // MessageBox.Show("Setting 3 Event show");
+            lblElevationMin.Text = userControl3.ElevationMin;
+            lblElevationMax.Text = userControl3.ElevationMax;
 
+            lblSS1Min.Text = userControl3.StrokeSensorMin;
+            lblSS1Max.Text = userControl3.StrokeSensorMax;
+            lblSS2Min.Text = userControl3.StrokeSensorMin;
+            lblSS2Max.Text = userControl3.StrokeSensorMax;
+
+            lblPressureMin1.Text = userControl3.PressureMin;
+            lblPressureMin2.Text = userControl3.PressureMin;
+            lblPressureMin3.Text = userControl3.PressureMin;
+            lblPressureMax1.Text = userControl3.PressureMax;
+            lblPressureMax2.Text = userControl3.PressureMax;
+            lblPressureMax3.Text = userControl3.PressureMax;
+
+            dangerousPValue = Convert.ToDouble(userControl3.PressureDangerousLimit);
+            
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -420,13 +537,15 @@ namespace Monitoring_System
             }
         }
         */
-        public bool IsGPS1Up()
-        {
-            return IsTCPServerUp("192.168.0.7", 23, 1000); //GPS1 TCP server and port
-        }
-        public bool IsGPS2Up()
+        public static bool IsGPS1Up()
         {
             return IsTCPServerUp("192.168.0.2", 5017, 1000); //GPS2 TCP server and port
+
+        }
+        public static bool IsGPS2Up()
+        {
+            
+            return IsTCPServerUp("192.168.0.7", 23, 1000); //GPS1 TCP server and port
         }
         /*
         public static bool IsPLCUp()
@@ -482,7 +601,7 @@ namespace Monitoring_System
             }
             catch (SocketException e)
             {
-                MessageBox.Show(string.Format("TCP connection to server {0} failed.", server));
+                MessageBox.Show(string.Format("TCP connection to server {0} failed.", server), e.Message);
                 isUp = false;
             }
 
@@ -1052,7 +1171,9 @@ namespace Monitoring_System
                 lblLadderStroke2.Text = Convert.ToString(strokeSensor2) + " [mm]"; //stroke sensor 2
 
                 lblTrim.Text = Convert.ToString(inclinometer1) + " deg";
+                lblTrimOnPB.Text = lblTrim.Text; //display on Picture Box
                 lblHeel.Text = Convert.ToString(inclinometer2) + " deg";
+                //lblTideReading.Text = Convert.ToString(inclinometer1); //need to add when available
 
                 if (p1SensorReading >= 0 && p1SensorReading <= 10)
                 {
@@ -1150,10 +1271,12 @@ namespace Monitoring_System
             userControl3.Time = DateTime.Now.ToString();
             userControl3.GPS1xValue = Convert.ToString(utmGPS1X);
             userControl3.GPS1yValue = Convert.ToString(utmGPS1Y);
+            userControl3.GPS1zValue = Convert.ToString(utmGPS1Z);
             userControl3.GPS1Mode = Convert.ToString(GPS1Mode);
 
             userControl3.GPS2xValue = Convert.ToString(utmGPS2X);
             userControl3.GPS2yValue = Convert.ToString(utmGPS2Y);
+            userControl3.GPS2zValue = Convert.ToString(utmGPS2Z);
             userControl3.GPS2Mode = Convert.ToString(GPS2Mode);
 
             userControl3.Heading = txtBearing.Text;
