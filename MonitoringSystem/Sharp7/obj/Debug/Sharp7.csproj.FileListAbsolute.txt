@@ -1,0 +1,6 @@
+D:\repos\MonitoringSystem\Sharp7\bin\Debug\Sharp7.dll
+D:\repos\MonitoringSystem\Sharp7\bin\Debug\Sharp7.pdb
+D:\repos\MonitoringSystem\Sharp7\obj\Debug\Sharp7.csproj.AssemblyReference.cache
+D:\repos\MonitoringSystem\Sharp7\obj\Debug\Sharp7.csproj.CoreCompileInputs.cache
+D:\repos\MonitoringSystem\Sharp7\obj\Debug\Sharp7.dll
+D:\repos\MonitoringSystem\Sharp7\obj\Debug\Sharp7.pdb
